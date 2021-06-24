@@ -1,4 +1,22 @@
 {
     "name": "human-way/camunda-client",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "HumanWay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HumanWay\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
 }
