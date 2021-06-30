@@ -2317,6 +2317,9 @@ class TaskApi
 
         try {
             $options = $this->createHttpClientOption();
+            $options['headers'] = [
+                'Accept' => 'application/xhtml+xml'
+            ];
             try {
                 $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
