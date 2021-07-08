@@ -134,7 +134,7 @@ getVariableInstances($variable_name, $variable_name_like, $process_instance_id_i
 
 Get Variable Instances
 
-Query for variable instances that fulfill given parameters. Parameters may be the properties of variable instances, such as the name or type. The size of the result set can be retrieved by using the [Get Variable Instance Count](https://docs.camunda.org/manual/7.15/reference/rest/variable-instance/get-query-count/) method.
+Query for variable instances that fulfill given parameters. Parameters may be the properties of variable instances, such as the name or type. The size of the result set can be retrieved by using the [Get Variable Instance Count](https://docs.camunda.org/manual/latest/reference/rest/variable-instance/get-query-count/) method.
 
 ### Example
 
@@ -224,7 +224,7 @@ getVariableInstancesCount($variable_name, $variable_name_like, $process_instance
 
 Get Variable Instance Count
 
-Query for the number of variable instances that fulfill given parameters. Takes the same parameters as the [Get Variable Instances](https://docs.camunda.org/manual/7.15/reference/rest/variable-instance/get-query/) method.
+Query for the number of variable instances that fulfill given parameters. Takes the same parameters as the [Get Variable Instances](https://docs.camunda.org/manual/latest/reference/rest/variable-instance/get-query/) method.
 
 ### Example
 
@@ -308,7 +308,7 @@ queryVariableInstances($first_result, $max_results, $deserialize_values, $variab
 
 Get Variable Instances (POST)
 
-Query for variable instances that fulfill given parameters through a JSON object. This method is slightly more powerful than the [Get Variable Instances](https://docs.camunda.org/manual/7.15/reference/rest/variable- instance/get-query/) method because it allows filtering by multiple variable instances of types `String`, `Number` or `Boolean`.
+Query for variable instances that fulfill given parameters through a JSON object. This method is slightly more powerful than the [Get Variable Instances](https://docs.camunda.org/manual/latest/reference/rest/variable- instance/get-query/) method because it allows filtering by multiple variable instances of types `String`, `Number` or `Boolean`.
 
 ### Example
 
@@ -370,7 +370,7 @@ queryVariableInstancesCount($variable_instance_query_dto): \OpenAPI\Client\Model
 
 Get Variable Instance Count (POST)
 
-Query for the number of variable instances that fulfill given parameters. This method takes the same message body as the [Get Variable Instances POST](https://docs.camunda.org/manual/7.15/reference/rest/variable- instance/post-query/) method and therefore it is slightly more powerful than the [Get Variable Instance Count](https://docs.camunda.org/manual/7.15/reference/rest/variable-instance/get-query-count/) method.
+Query for the number of variable instances that fulfill given parameters. This method takes the same message body as the [Get Variable Instances POST](https://docs.camunda.org/manual/latest/reference/rest/variable- instance/post-query/) method and therefore it is slightly more powerful than the [Get Variable Instance Count](https://docs.camunda.org/manual/latest/reference/rest/variable-instance/get-query-count/) method.
 
 ### Example
 

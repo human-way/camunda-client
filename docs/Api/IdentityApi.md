@@ -18,7 +18,7 @@ checkPassword($password_policy_request_dto): \OpenAPI\Client\Model\CheckPassword
 
 Validate Password
 
-A password policy consists of a list of rules that new passwords must follow to be policy compliant. A password can be checked for compliancy via this end point. More information on password policies in Camunda can be found in the password policy [user guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/password-policy/) and in the [security instructions](https://docs.camunda.org/manual/7.15/user-guide/security/).
+A password policy consists of a list of rules that new passwords must follow to be policy compliant. A password can be checked for compliancy via this end point. More information on password policies in Camunda can be found in the password policy [user guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/password-policy/) and in the [security instructions](https://docs.camunda.org/manual/latest/user-guide/security/).
 
 ### Example
 
@@ -130,7 +130,7 @@ getPasswordPolicy(): \OpenAPI\Client\Model\PasswordPolicyDto
 
 Get Password Policy
 
-A password policy consists of a list of rules that new passwords must follow to be policy compliant. This end point returns a JSON representation of the list of policy rules. More information on password policies in Camunda can be found in the password policy [user guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/password-policy/) and in the [security instructions](https://docs.camunda.org/manual/7.15/user-guide/security/).
+A password policy consists of a list of rules that new passwords must follow to be policy compliant. This end point returns a JSON representation of the list of policy rules. More information on password policies in Camunda can be found in the password policy [user guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/password-policy/) and in the [security instructions](https://docs.camunda.org/manual/latest/user-guide/security/).
 
 ### Example
 

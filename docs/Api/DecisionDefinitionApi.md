@@ -717,7 +717,7 @@ getDecisionDefinitions($sort_by, $sort_order, $first_result, $max_results, $deci
 
 Get List
 
-Queries for decision definitions that fulfill given parameters. Parameters may be the properties of decision definitions, such as the name, key or version. The size of the result set can be retrieved by using the [Get Decision Definition Count](https://docs.camunda.org/manual/7.15/reference/rest/decision-definition/get-query-count/) method.
+Queries for decision definitions that fulfill given parameters. Parameters may be the properties of decision definitions, such as the name, key or version. The size of the result set can be retrieved by using the [Get Decision Definition Count](https://docs.camunda.org/manual/latest/reference/rest/decision-definition/get-query-count/) method.
 
 ### Example
 
@@ -825,7 +825,7 @@ getDecisionDefinitionsCount($decision_definition_id, $decision_definition_id_in,
 
 Get List Count
 
-Requests the number of decision definitions that fulfill the query criteria. Takes the same filtering parameters as the [Get Decision Definition](https://docs.camunda.org/manual/7.15/reference/rest/decision-definition/get-query/) method.
+Requests the number of decision definitions that fulfill the query criteria. Takes the same filtering parameters as the [Get Decision Definition](https://docs.camunda.org/manual/latest/reference/rest/decision-definition/get-query/) method.
 
 ### Example
 
@@ -925,7 +925,7 @@ updateHistoryTimeToLiveByDecisionDefinitionId($id, $history_time_to_live_dto)
 
 Update History Time to Live
 
-Updates history time to live for decision definition. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates history time to live for decision definition. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 
@@ -982,7 +982,7 @@ updateHistoryTimeToLiveByDecisionDefinitionKey($key, $history_time_to_live_dto)
 
 Update History Time to Live By Key
 
-Updates the latest version of the decision definition which belongs to no tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates the latest version of the decision definition which belongs to no tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 
@@ -1039,7 +1039,7 @@ updateHistoryTimeToLiveByDecisionDefinitionKeyAndTenant($key, $tenant_id, $histo
 
 Update History Time to Live By Key And Tenant
 
-Updates the latest version of the decision definition for tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates the latest version of the decision definition for tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 

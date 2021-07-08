@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **tenant_id** | **string** | The tenant id of the decision definition. | [optional]
 **decision_requirements_definition_id** | **string** | The id of the decision requirements definition this decision definition belongs to. | [optional]
 **decision_requirements_definition_key** | **string** | The key of the decision requirements definition this decision definition belongs to. | [optional]
-**history_time_to_live** | **int** | History time to live value of the decision definition. Is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup). | [optional]
+**history_time_to_live** | **int** | History time to live value of the decision definition. Is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup). | [optional]
 **version_tag** | **string** | The version tag of the decision definition. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

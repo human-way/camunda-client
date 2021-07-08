@@ -148,7 +148,7 @@ $apiInstance = new OpenAPI\Client\Api\MetricsApi(
     new GuzzleHttp\Client()
 );
 $name = 'name_example'; // string | The name of the metric.
-$reporter = 'reporter_example'; // string | The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.15/reference/deployment-descriptors/tags/process-engine/#hostname).
+$reporter = 'reporter_example'; // string | The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/latest/reference/deployment-descriptors/tags/process-engine/#hostname).
 $start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date (inclusive).
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date (exclusive).
 $first_result = 56; // int | Pagination of results. Specifies the index of the first result to return.
@@ -169,7 +169,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the metric. | [optional]
- **reporter** | **string**| The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.15/reference/deployment-descriptors/tags/process-engine/#hostname). | [optional]
+ **reporter** | **string**| The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/latest/reference/deployment-descriptors/tags/process-engine/#hostname). | [optional]
  **start_date** | **\DateTime**| The start date (inclusive). | [optional]
  **end_date** | **\DateTime**| The end date (exclusive). | [optional]
  **first_result** | **int**| Pagination of results. Specifies the index of the first result to return. | [optional]

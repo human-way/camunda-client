@@ -243,7 +243,7 @@ getUserCount($id, $id_in, $first_name, $first_name_like, $last_name, $last_name_
 
 Get List Count
 
-Queries for the number of deployments that fulfill given parameters. Takes the same parameters as the [Get Users](https://docs.camunda.org/manual/7.15/reference/rest/user/get-query/) method.
+Queries for the number of deployments that fulfill given parameters. Takes the same parameters as the [Get Users](https://docs.camunda.org/manual/latest/reference/rest/user/get-query/) method.
 
 ### Example
 
@@ -375,7 +375,7 @@ getUsers($id, $id_in, $first_name, $first_name_like, $last_name, $last_name_like
 
 Get List
 
-Query for a list of users using a list of parameters. The size of the result set can be retrieved by using the Get User Count method. [Get User Count](https://docs.camunda.org/manual/7.15/reference/rest/user/get-query-count/) method.
+Query for a list of users using a list of parameters. The size of the result set can be retrieved by using the Get User Count method. [Get User Count](https://docs.camunda.org/manual/latest/reference/rest/user/get-query-count/) method.
 
 ### Example
 

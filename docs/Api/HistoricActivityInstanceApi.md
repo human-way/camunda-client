@@ -75,7 +75,7 @@ getHistoricActivityInstances($sort_by, $sort_order, $first_result, $max_results,
 
 Get List
 
-Queries for historic activity instances that fulfill the given parameters. The size of the result set can be retrieved by using the [Get Historic Activity Instance Count](https://docs.camunda.org/manual/7.15/reference/rest/history/activity-instance/get-activity-instance-query-count/) method.
+Queries for historic activity instances that fulfill the given parameters. The size of the result set can be retrieved by using the [Get Historic Activity Instance Count](https://docs.camunda.org/manual/latest/reference/rest/history/activity-instance/get-activity-instance-query-count/) method.
 
 ### Example
 
@@ -106,10 +106,10 @@ $finished = True; // bool | Only include finished activity instances. Value may 
 $unfinished = True; // bool | Only include unfinished activity instances. Value may only be `true`, as `false` behaves the same as when the property is not set.
 $canceled = True; // bool | Only include canceled activity instances. Value may only be `true`, as `false` behaves the same as when the property is not set.
 $complete_scope = True; // bool | Only include activity instances which completed a scope. Value may only be `true`, as `false` behaves the same as when the property is not set.
-$started_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$started_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$finished_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$finished_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$started_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$started_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$finished_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$finished_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of ids. An activity instance must have one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include historic activity instances that belong to no tenant. Value may only be `true`, as `false` is the default behavior.
 
@@ -141,10 +141,10 @@ Name | Type | Description  | Notes
  **unfinished** | **bool**| Only include unfinished activity instances. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
  **canceled** | **bool**| Only include canceled activity instances. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
  **complete_scope** | **bool**| Only include activity instances which completed a scope. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
- **started_before** | **\DateTime**| Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **started_after** | **\DateTime**| Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **finished_before** | **\DateTime**| Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **finished_after** | **\DateTime**| Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **started_before** | **\DateTime**| Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **started_after** | **\DateTime**| Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **finished_before** | **\DateTime**| Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **finished_after** | **\DateTime**| Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of ids. An activity instance must have one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include historic activity instances that belong to no tenant. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
 
@@ -173,7 +173,7 @@ getHistoricActivityInstancesCount($activity_instance_id, $process_instance_id, $
 
 Get List Count
 
-Queries for the number of historic activity instances that fulfill the given parameters. Takes the same parameters as the [Get Historic Activity Instance](https://docs.camunda.org/manual/7.15/reference/rest/history/activity-instance/get-activity-instance-query/)  method.
+Queries for the number of historic activity instances that fulfill the given parameters. Takes the same parameters as the [Get Historic Activity Instance](https://docs.camunda.org/manual/latest/reference/rest/history/activity-instance/get-activity-instance-query/)  method.
 
 ### Example
 
@@ -200,10 +200,10 @@ $finished = True; // bool | Only include finished activity instances. Value may 
 $unfinished = True; // bool | Only include unfinished activity instances. Value may only be `true`, as `false` behaves the same as when the property is not set.
 $canceled = True; // bool | Only include canceled activity instances. Value may only be `true`, as `false` behaves the same as when the property is not set.
 $complete_scope = True; // bool | Only include activity instances which completed a scope. Value may only be `true`, as `false` behaves the same as when the property is not set.
-$started_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$started_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$finished_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$finished_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$started_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$started_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$finished_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$finished_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of ids. An activity instance must have one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include historic activity instances that belong to no tenant. Value may only be `true`, as `false` is the default behavior.
 
@@ -231,10 +231,10 @@ Name | Type | Description  | Notes
  **unfinished** | **bool**| Only include unfinished activity instances. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
  **canceled** | **bool**| Only include canceled activity instances. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
  **complete_scope** | **bool**| Only include activity instances which completed a scope. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; behaves the same as when the property is not set. | [optional]
- **started_before** | **\DateTime**| Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **started_after** | **\DateTime**| Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **finished_before** | **\DateTime**| Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **finished_after** | **\DateTime**| Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **started_before** | **\DateTime**| Restrict to instances that were started before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **started_after** | **\DateTime**| Restrict to instances that were started after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **finished_before** | **\DateTime**| Restrict to instances that were finished before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **finished_after** | **\DateTime**| Restrict to instances that were finished after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of ids. An activity instance must have one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include historic activity instances that belong to no tenant. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
 
@@ -263,7 +263,7 @@ queryHistoricActivityInstances($first_result, $max_results, $historic_activity_i
 
 Get List (POST)
 
-Queries for historic activity instances that fulfill the given parameters. The size of the result set can be retrieved by using the [Get Historic Activity Instance Count](https://docs.camunda.org/manual/7.15/reference/rest/history/activity-instance/get-activity-instance-query-count/) method.
+Queries for historic activity instances that fulfill the given parameters. The size of the result set can be retrieved by using the [Get Historic Activity Instance Count](https://docs.camunda.org/manual/latest/reference/rest/history/activity-instance/get-activity-instance-query-count/) method.
 
 ### Example
 

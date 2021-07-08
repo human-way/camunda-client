@@ -139,7 +139,7 @@ getJobs($job_id, $job_ids, $job_definition_id, $process_instance_id, $process_in
 
 Get Jobs
 
-Queries for jobs that fulfill given parameters. The size of the result set can be retrieved by using the [Get Job Count](https://docs.camunda.org/manual/7.15/reference/rest/job/get-query-count/) method.
+Queries for jobs that fulfill given parameters. The size of the result set can be retrieved by using the [Get Job Count](https://docs.camunda.org/manual/latest/reference/rest/job/get-query-count/) method.
 
 ### Example
 
@@ -253,7 +253,7 @@ getJobsCount($job_id, $job_ids, $job_definition_id, $process_instance_id, $proce
 
 Get Job Count
 
-Queries for the number of jobs that fulfill given parameters. Takes the same parameters as the [Get Jobs](https://docs.camunda.org/manual/7.15/reference/rest/job/get-query/) method.
+Queries for the number of jobs that fulfill given parameters. Takes the same parameters as the [Get Jobs](https://docs.camunda.org/manual/latest/reference/rest/job/get-query/) method.
 
 ### Example
 
@@ -415,7 +415,7 @@ queryJobs($first_result, $max_results, $job_query_dto): \OpenAPI\Client\Model\Jo
 
 Get Jobs (POST)
 
-Queries for jobs that fulfill given parameters. This method is slightly more powerful than the [Get Jobs](https://docs.camunda.org/manual/7.15/reference/rest/job/get-query/) method because it allows filtering by multiple jobs of types `String`, `Number` or `Boolean`.
+Queries for jobs that fulfill given parameters. This method is slightly more powerful than the [Get Jobs](https://docs.camunda.org/manual/latest/reference/rest/job/get-query/) method because it allows filtering by multiple jobs of types `String`, `Number` or `Boolean`.
 
 ### Example
 
@@ -475,7 +475,7 @@ queryJobsCount($job_query_dto): \OpenAPI\Client\Model\CountResultDto
 
 Get Job Count (POST)
 
-Queries for jobs that fulfill given parameters. This method takes the same message body as the [Get Jobs POST](https://docs.camunda.org/manual/7.15/reference/rest/job/post- query/) method and therefore it is slightly more powerful than the [Get Job Count](https://docs.camunda.org/manual/7.15/reference/rest/job/get-query-count/) method.
+Queries for jobs that fulfill given parameters. This method takes the same message body as the [Get Jobs POST](https://docs.camunda.org/manual/latest/reference/rest/job/post- query/) method and therefore it is slightly more powerful than the [Get Job Count](https://docs.camunda.org/manual/latest/reference/rest/job/get-query-count/) method.
 
 ### Example
 

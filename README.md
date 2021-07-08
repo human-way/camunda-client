@@ -49,18 +49,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BatchApi(
+$apiInstance = new OpenAPI\Client\Api\AuthorizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string | The id of the batch to be deleted.
-$cascade = True; // bool | `true`, if the historic batch and historic job logs for this batch should also be deleted.
 
 try {
-    $apiInstance->deleteBatch($id, $cascade);
+    $result = $apiInstance->availableOperationsAuthorization();
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BatchApi->deleteBatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AuthorizationApi->availableOperationsAuthorization: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -71,6 +70,15 @@ All URIs are relative to *http://localhost:8080/engine-rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AuthorizationApi* | [**availableOperationsAuthorization**](docs/Api/AuthorizationApi.md#availableoperationsauthorization) | **OPTIONS** /authorization | Authorization Resource Options
+*AuthorizationApi* | [**availableOperationsAuthorizationInstance**](docs/Api/AuthorizationApi.md#availableoperationsauthorizationinstance) | **OPTIONS** /authorization/{id} | Authorization Resource Options
+*AuthorizationApi* | [**createAuthorization**](docs/Api/AuthorizationApi.md#createauthorization) | **POST** /authorization/create | Create a New Authorization
+*AuthorizationApi* | [**deleteAuthorization**](docs/Api/AuthorizationApi.md#deleteauthorization) | **DELETE** /authorization/{id} | Delete Authorization
+*AuthorizationApi* | [**getAuthorization**](docs/Api/AuthorizationApi.md#getauthorization) | **GET** /authorization/{id} | Get Authorization
+*AuthorizationApi* | [**getAuthorizationCount**](docs/Api/AuthorizationApi.md#getauthorizationcount) | **GET** /authorization/count | Get Authorization Count
+*AuthorizationApi* | [**isUserAuthorized**](docs/Api/AuthorizationApi.md#isuserauthorized) | **GET** /authorization/check | Perform an Authorization Check
+*AuthorizationApi* | [**queryAuthorizations**](docs/Api/AuthorizationApi.md#queryauthorizations) | **GET** /authorization | Get Authorizations
+*AuthorizationApi* | [**updateAuthorization**](docs/Api/AuthorizationApi.md#updateauthorization) | **PUT** /authorization/{id} | Update an Authorization
 *BatchApi* | [**deleteBatch**](docs/Api/BatchApi.md#deletebatch) | **DELETE** /batch/{id} | Delete
 *BatchApi* | [**getBatch**](docs/Api/BatchApi.md#getbatch) | **GET** /batch/{id} | Get
 *BatchApi* | [**getBatchStatistics**](docs/Api/BatchApi.md#getbatchstatistics) | **GET** /batch/statistics | Get Statistics
@@ -96,6 +104,17 @@ Class | Method | HTTP request | Description
 *DecisionDefinitionApi* | [**updateHistoryTimeToLiveByDecisionDefinitionId**](docs/Api/DecisionDefinitionApi.md#updatehistorytimetolivebydecisiondefinitionid) | **PUT** /decision-definition/{id}/history-time-to-live | Update History Time to Live
 *DecisionDefinitionApi* | [**updateHistoryTimeToLiveByDecisionDefinitionKey**](docs/Api/DecisionDefinitionApi.md#updatehistorytimetolivebydecisiondefinitionkey) | **PUT** /decision-definition/key/{key}/history-time-to-live | Update History Time to Live By Key
 *DecisionDefinitionApi* | [**updateHistoryTimeToLiveByDecisionDefinitionKeyAndTenant**](docs/Api/DecisionDefinitionApi.md#updatehistorytimetolivebydecisiondefinitionkeyandtenant) | **PUT** /decision-definition/key/{key}/tenant-id/{tenant-id}/history-time-to-live | Update History Time to Live By Key And Tenant
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionById**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitionbyid) | **GET** /decision-requirements-definition/{id} | Get Decision Requirements Definition by ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionByKey**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitionbykey) | **GET** /decision-requirements-definition/key/{key} | Get Decision Requirements Definition by Key
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionByKeyAndTenantId**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitionbykeyandtenantid) | **GET** /decision-requirements-definition/key/{key}/tenant-id/{tenant-id} | Get Decision Requirements Definition by Key and Tenant ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDiagramById**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondiagrambyid) | **GET** /decision-requirements-definition/{id}/diagram | Get Decision Requirements Diagram by ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDiagramByKey**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondiagrambykey) | **GET** /decision-requirements-definition/key/{key}/diagram | Get Decision Requirements Diagram by Key
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDiagramByKeyAndTenantId**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondiagrambykeyandtenantid) | **GET** /decision-requirements-definition/key/{key}/tenant-id/{tenant-id}/diagram | Get Decision Requirements Diagram by Key and Tenant ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDmnXmlById**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondmnxmlbyid) | **GET** /decision-requirements-definition/{id}/xml | Get DMN XML by ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDmnXmlByKey**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondmnxmlbykey) | **GET** /decision-requirements-definition/key/{key}/xml | Get DMN XML by Key
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionDmnXmlByKeyAndTenantId**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitiondmnxmlbykeyandtenantid) | **GET** /decision-requirements-definition/key/{key}/tenant-id/{tenant-id}/xml | Get DMN XML by Key and Tenant ID
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitions**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitions) | **GET** /decision-requirements-definition | Get Decision Requirements Definitions
+*DecisionRequirementsDefinitionApi* | [**getDecisionRequirementsDefinitionsCount**](docs/Api/DecisionRequirementsDefinitionApi.md#getdecisionrequirementsdefinitionscount) | **GET** /decision-requirements-definition/count | Get Decision Requirements Definition Count
 *DeploymentApi* | [**createDeployment**](docs/Api/DeploymentApi.md#createdeployment) | **POST** /deployment/create | Create
 *DeploymentApi* | [**deleteDeployment**](docs/Api/DeploymentApi.md#deletedeployment) | **DELETE** /deployment/{id} | Delete
 *DeploymentApi* | [**getDeployment**](docs/Api/DeploymentApi.md#getdeployment) | **GET** /deployment/{id} | Get
@@ -142,6 +161,20 @@ Class | Method | HTTP request | Description
 *ExternalTaskApi* | [**setExternalTaskRetries**](docs/Api/ExternalTaskApi.md#setexternaltaskretries) | **PUT** /external-task/retries | Set Retries Sync
 *ExternalTaskApi* | [**setExternalTaskRetriesAsyncOperation**](docs/Api/ExternalTaskApi.md#setexternaltaskretriesasyncoperation) | **POST** /external-task/retries-async | Set Retries Async
 *ExternalTaskApi* | [**unlock**](docs/Api/ExternalTaskApi.md#unlock) | **POST** /external-task/{id}/unlock | Unlock
+*FilterApi* | [**createFilter**](docs/Api/FilterApi.md#createfilter) | **POST** /filter/create | Create Filter
+*FilterApi* | [**deleteFilter**](docs/Api/FilterApi.md#deletefilter) | **DELETE** /filter/{id} | Delete Filter
+*FilterApi* | [**executeFilterCount**](docs/Api/FilterApi.md#executefiltercount) | **GET** /filter/{id}/count | Execute Filter Count
+*FilterApi* | [**executeFilterList**](docs/Api/FilterApi.md#executefilterlist) | **GET** /filter/{id}/list | Execute Filter List
+*FilterApi* | [**executeFilterSingleResult**](docs/Api/FilterApi.md#executefiltersingleresult) | **GET** /filter/{id}/singleResult | Execute Filter Single Result
+*FilterApi* | [**filterResourceOptions**](docs/Api/FilterApi.md#filterresourceoptions) | **OPTIONS** /filter | Filter Resource Options
+*FilterApi* | [**filterResourceOptionsSingle**](docs/Api/FilterApi.md#filterresourceoptionssingle) | **OPTIONS** /filter/{id} | Filter Resource Options
+*FilterApi* | [**getFilterCount**](docs/Api/FilterApi.md#getfiltercount) | **GET** /filter/count | Get Filter Count
+*FilterApi* | [**getFilterList**](docs/Api/FilterApi.md#getfilterlist) | **GET** /filter | Get Filters
+*FilterApi* | [**getSingleFilter**](docs/Api/FilterApi.md#getsinglefilter) | **GET** /filter/{id} | Get Single Filter
+*FilterApi* | [**postExecuteFilterCount**](docs/Api/FilterApi.md#postexecutefiltercount) | **POST** /filter/{id}/count | Execute Filter Count (POST)
+*FilterApi* | [**postExecuteFilterList**](docs/Api/FilterApi.md#postexecutefilterlist) | **POST** /filter/{id}/list | Execute Filter List (POST)
+*FilterApi* | [**postExecuteFilterSingleResult**](docs/Api/FilterApi.md#postexecutefiltersingleresult) | **POST** /filter/{id}/singleResult | Execute Filter Single Result (POST)
+*FilterApi* | [**updateFilter**](docs/Api/FilterApi.md#updatefilter) | **PUT** /filter/{id} | Update Filter
 *GroupApi* | [**availableGroupInstanceOperations**](docs/Api/GroupApi.md#availablegroupinstanceoperations) | **OPTIONS** /group/{id} | Group Resource Instance Options
 *GroupApi* | [**availableGroupMembersOperations**](docs/Api/GroupApi.md#availablegroupmembersoperations) | **OPTIONS** /group/{id}/members | Group Membership Resource Options
 *GroupApi* | [**availableGroupOperations**](docs/Api/GroupApi.md#availablegroupoperations) | **OPTIONS** /group | Group Resource Options
@@ -160,6 +193,45 @@ Class | Method | HTTP request | Description
 *HistoricActivityInstanceApi* | [**getHistoricActivityInstancesCount**](docs/Api/HistoricActivityInstanceApi.md#gethistoricactivityinstancescount) | **GET** /history/activity-instance/count | Get List Count
 *HistoricActivityInstanceApi* | [**queryHistoricActivityInstances**](docs/Api/HistoricActivityInstanceApi.md#queryhistoricactivityinstances) | **POST** /history/activity-instance | Get List (POST)
 *HistoricActivityInstanceApi* | [**queryHistoricActivityInstancesCount**](docs/Api/HistoricActivityInstanceApi.md#queryhistoricactivityinstancescount) | **POST** /history/activity-instance/count | Get List Count (POST)
+*HistoricBatchApi* | [**deleteHistoricBatch**](docs/Api/HistoricBatchApi.md#deletehistoricbatch) | **DELETE** /history/batch/{id} | Delete Historic Batch
+*HistoricBatchApi* | [**getCleanableHistoricBatchesReport**](docs/Api/HistoricBatchApi.md#getcleanablehistoricbatchesreport) | **GET** /history/batch/cleanable-batch-report | Get Cleanable Batch Report
+*HistoricBatchApi* | [**getCleanableHistoricBatchesReportCount**](docs/Api/HistoricBatchApi.md#getcleanablehistoricbatchesreportcount) | **GET** /history/batch/cleanable-batch-report/count | Get Cleanable Batch Report Count
+*HistoricBatchApi* | [**getHistoricBatch**](docs/Api/HistoricBatchApi.md#gethistoricbatch) | **GET** /history/batch/{id} | Get Historic Batch
+*HistoricBatchApi* | [**getHistoricBatches**](docs/Api/HistoricBatchApi.md#gethistoricbatches) | **GET** /history/batch | Get Historic Batches
+*HistoricBatchApi* | [**getHistoricBatchesCount**](docs/Api/HistoricBatchApi.md#gethistoricbatchescount) | **GET** /history/batch/count | Get Historic Batch Count
+*HistoricBatchApi* | [**setRemovalTimeAsyncHistoricBatch**](docs/Api/HistoricBatchApi.md#setremovaltimeasynchistoricbatch) | **POST** /history/batch/set-removal-time | Set Removal Time Async (POST)
+*HistoricDecisionDefinitionApi* | [**getCleanableHistoricDecisionInstanceReport**](docs/Api/HistoricDecisionDefinitionApi.md#getcleanablehistoricdecisioninstancereport) | **GET** /history/decision-definition/cleanable-decision-instance-report | Get Cleanable Decision Instance Report
+*HistoricDecisionDefinitionApi* | [**getCleanableHistoricDecisionInstanceReportCount**](docs/Api/HistoricDecisionDefinitionApi.md#getcleanablehistoricdecisioninstancereportcount) | **GET** /history/decision-definition/cleanable-decision-instance-report/count | Get Cleanable Decision Instance Report Count
+*HistoricDecisionInstanceApi* | [**deleteAsync**](docs/Api/HistoricDecisionInstanceApi.md#deleteasync) | **POST** /history/decision-instance/delete | Delete Async (POST)
+*HistoricDecisionInstanceApi* | [**getHistoricDecisionInstance**](docs/Api/HistoricDecisionInstanceApi.md#gethistoricdecisioninstance) | **GET** /history/decision-instance/{id} | Get Historic Decision Instance
+*HistoricDecisionInstanceApi* | [**getHistoricDecisionInstances**](docs/Api/HistoricDecisionInstanceApi.md#gethistoricdecisioninstances) | **GET** /history/decision-instance | Get Historic Decision Instances
+*HistoricDecisionInstanceApi* | [**getHistoricDecisionInstancesCount**](docs/Api/HistoricDecisionInstanceApi.md#gethistoricdecisioninstancescount) | **GET** /history/decision-instance/count | Get Historic Decision Instance Count
+*HistoricDecisionInstanceApi* | [**setRemovalTimeAsyncHistoricDecisionInstance**](docs/Api/HistoricDecisionInstanceApi.md#setremovaltimeasynchistoricdecisioninstance) | **POST** /history/decision-instance/set-removal-time | Set Removal Time Async (POST)
+*HistoricDecisionRequirementsDefinitionApi* | [**getDecisionStatistics**](docs/Api/HistoricDecisionRequirementsDefinitionApi.md#getdecisionstatistics) | **GET** /history/decision-requirements-definition/{id}/statistics | Get DRD Statistics
+*HistoricDetailApi* | [**getHistoricDetails**](docs/Api/HistoricDetailApi.md#gethistoricdetails) | **GET** /history/detail | Get Historic Details
+*HistoricDetailApi* | [**getHistoricDetailsCount**](docs/Api/HistoricDetailApi.md#gethistoricdetailscount) | **GET** /history/detail/count | Get Historic Detail Count
+*HistoricDetailApi* | [**historicDetail**](docs/Api/HistoricDetailApi.md#historicdetail) | **GET** /history/detail/{id} | Get Historic Detail
+*HistoricDetailApi* | [**historicDetailBinary**](docs/Api/HistoricDetailApi.md#historicdetailbinary) | **GET** /history/detail/{id}/data | Get Historic Detail (Binary)
+*HistoricDetailApi* | [**queryHistoricDetails**](docs/Api/HistoricDetailApi.md#queryhistoricdetails) | **POST** /history/detail | Get Historic Details (POST)
+*HistoricExternalTaskLogApi* | [**getErrorDetailsHistoricExternalTaskLog**](docs/Api/HistoricExternalTaskLogApi.md#geterrordetailshistoricexternaltasklog) | **GET** /history/external-task-log/{id}/error-details | Get External Task Log Error Details
+*HistoricExternalTaskLogApi* | [**getHistoricExternalTaskLog**](docs/Api/HistoricExternalTaskLogApi.md#gethistoricexternaltasklog) | **GET** /history/external-task-log/{id} | Get External Task Log
+*HistoricExternalTaskLogApi* | [**getHistoricExternalTaskLogs**](docs/Api/HistoricExternalTaskLogApi.md#gethistoricexternaltasklogs) | **GET** /history/external-task-log | Get External Task Logs
+*HistoricExternalTaskLogApi* | [**getHistoricExternalTaskLogsCount**](docs/Api/HistoricExternalTaskLogApi.md#gethistoricexternaltasklogscount) | **GET** /history/external-task-log/count | Get External Task Log Count
+*HistoricExternalTaskLogApi* | [**queryHistoricExternalTaskLogs**](docs/Api/HistoricExternalTaskLogApi.md#queryhistoricexternaltasklogs) | **POST** /history/external-task-log | Get External Task Logs (POST)
+*HistoricExternalTaskLogApi* | [**queryHistoricExternalTaskLogsCount**](docs/Api/HistoricExternalTaskLogApi.md#queryhistoricexternaltasklogscount) | **POST** /history/external-task-log/count | Get External Task Log Count (POST)
+*HistoricIdentityLinkLogApi* | [**getHistoricIdentityLinks**](docs/Api/HistoricIdentityLinkLogApi.md#gethistoricidentitylinks) | **GET** /history/identity-link-log | Get Identity Link Logs
+*HistoricIdentityLinkLogApi* | [**getHistoricIdentityLinksCount**](docs/Api/HistoricIdentityLinkLogApi.md#gethistoricidentitylinkscount) | **GET** /history/identity-link-log/count | Get Identity Link Log Count
+*HistoricIncidentApi* | [**getHistoricIncidents**](docs/Api/HistoricIncidentApi.md#gethistoricincidents) | **GET** /history/incident | Get Incidents
+*HistoricIncidentApi* | [**getHistoricIncidentsCount**](docs/Api/HistoricIncidentApi.md#gethistoricincidentscount) | **GET** /history/incident/count | Get Incident Count
+*HistoricJobLogApi* | [**getHistoricJobLog**](docs/Api/HistoricJobLogApi.md#gethistoricjoblog) | **GET** /history/job-log/{id} | Get Job Log
+*HistoricJobLogApi* | [**getHistoricJobLogs**](docs/Api/HistoricJobLogApi.md#gethistoricjoblogs) | **GET** /history/job-log | Get Job Logs
+*HistoricJobLogApi* | [**getHistoricJobLogsCount**](docs/Api/HistoricJobLogApi.md#gethistoricjoblogscount) | **GET** /history/job-log/count | Get Job Log Count
+*HistoricJobLogApi* | [**getStacktraceHistoricJobLog**](docs/Api/HistoricJobLogApi.md#getstacktracehistoricjoblog) | **GET** /history/job-log/{id}/stacktrace | Get Job Log Exception Stacktrace
+*HistoricJobLogApi* | [**queryHistoricJobLogs**](docs/Api/HistoricJobLogApi.md#queryhistoricjoblogs) | **POST** /history/job-log | Get Job Logs (POST)
+*HistoricJobLogApi* | [**queryHistoricJobLogsCount**](docs/Api/HistoricJobLogApi.md#queryhistoricjoblogscount) | **POST** /history/job-log/count | Get Job Log Count (POST)
+*HistoricProcessDefinitionApi* | [**getCleanableHistoricProcessInstanceReport**](docs/Api/HistoricProcessDefinitionApi.md#getcleanablehistoricprocessinstancereport) | **GET** /history/process-definition/cleanable-process-instance-report | Get Cleanable Process Instance Report
+*HistoricProcessDefinitionApi* | [**getCleanableHistoricProcessInstanceReportCount**](docs/Api/HistoricProcessDefinitionApi.md#getcleanablehistoricprocessinstancereportcount) | **GET** /history/process-definition/cleanable-process-instance-report/count | Get Cleanable Process Instance Report Count
+*HistoricProcessDefinitionApi* | [**getHistoricActivityStatistics**](docs/Api/HistoricProcessDefinitionApi.md#gethistoricactivitystatistics) | **GET** /history/process-definition/{id}/statistics | Get Historic Activity Statistics
 *HistoricProcessInstanceApi* | [**deleteHistoricProcessInstance**](docs/Api/HistoricProcessInstanceApi.md#deletehistoricprocessinstance) | **DELETE** /history/process-instance/{id} | Delete
 *HistoricProcessInstanceApi* | [**deleteHistoricProcessInstancesAsync**](docs/Api/HistoricProcessInstanceApi.md#deletehistoricprocessinstancesasync) | **POST** /history/process-instance/delete | Delete Async (POST)
 *HistoricProcessInstanceApi* | [**deleteHistoricVariableInstancesOfHistoricProcessInstance**](docs/Api/HistoricProcessInstanceApi.md#deletehistoricvariableinstancesofhistoricprocessinstance) | **DELETE** /history/process-instance/{id}/variable-instances | Delete Variable Instances
@@ -170,6 +242,26 @@ Class | Method | HTTP request | Description
 *HistoricProcessInstanceApi* | [**queryHistoricProcessInstances**](docs/Api/HistoricProcessInstanceApi.md#queryhistoricprocessinstances) | **POST** /history/process-instance | Get List (POST)
 *HistoricProcessInstanceApi* | [**queryHistoricProcessInstancesCount**](docs/Api/HistoricProcessInstanceApi.md#queryhistoricprocessinstancescount) | **POST** /history/process-instance/count | Get List Count (POST)
 *HistoricProcessInstanceApi* | [**setRemovalTimeAsync**](docs/Api/HistoricProcessInstanceApi.md#setremovaltimeasync) | **POST** /history/process-instance/set-removal-time | Set Removal Time Async (POST)
+*HistoricTaskInstanceApi* | [**getHistoricTaskInstanceReport**](docs/Api/HistoricTaskInstanceApi.md#gethistorictaskinstancereport) | **GET** /history/task/report | Get Task Report (Historic)
+*HistoricTaskInstanceApi* | [**getHistoricTaskInstances**](docs/Api/HistoricTaskInstanceApi.md#gethistorictaskinstances) | **GET** /history/task | Get Tasks (Historic)
+*HistoricTaskInstanceApi* | [**getHistoricTaskInstancesCount**](docs/Api/HistoricTaskInstanceApi.md#gethistorictaskinstancescount) | **GET** /history/task/count | Get Task Count
+*HistoricTaskInstanceApi* | [**queryHistoricTaskInstances**](docs/Api/HistoricTaskInstanceApi.md#queryhistorictaskinstances) | **POST** /history/task | Get Tasks (Historic) (POST)
+*HistoricTaskInstanceApi* | [**queryHistoricTaskInstancesCount**](docs/Api/HistoricTaskInstanceApi.md#queryhistorictaskinstancescount) | **POST** /history/task/count | Get Task Count (POST)
+*HistoricUserOperationLogApi* | [**clearAnnotationUserOperationLog**](docs/Api/HistoricUserOperationLogApi.md#clearannotationuseroperationlog) | **PUT** /history/user-operation/{operationId}/clear-annotation | Clear Annotation of an User Operation Log (Historic)
+*HistoricUserOperationLogApi* | [**queryUserOperationCount**](docs/Api/HistoricUserOperationLogApi.md#queryuseroperationcount) | **GET** /history/user-operation/count | Get User Operation Log Count
+*HistoricUserOperationLogApi* | [**queryUserOperationEntries**](docs/Api/HistoricUserOperationLogApi.md#queryuseroperationentries) | **GET** /history/user-operation | Get User Operation Log (Historic)
+*HistoricUserOperationLogApi* | [**setAnnotationUserOperationLog**](docs/Api/HistoricUserOperationLogApi.md#setannotationuseroperationlog) | **PUT** /history/user-operation/{operationId}/set-annotation | Set Annotation to an User Operation Log (Historic)
+*HistoricVariableInstanceApi* | [**deleteHistoricVariableInstance**](docs/Api/HistoricVariableInstanceApi.md#deletehistoricvariableinstance) | **DELETE** /history/variable-instance/{id} | Delete Variable Instance
+*HistoricVariableInstanceApi* | [**getHistoricVariableInstance**](docs/Api/HistoricVariableInstanceApi.md#gethistoricvariableinstance) | **GET** /history/variable-instance/{id} | Get Variable Instance
+*HistoricVariableInstanceApi* | [**getHistoricVariableInstanceBinary**](docs/Api/HistoricVariableInstanceApi.md#gethistoricvariableinstancebinary) | **GET** /history/variable-instance/{id}/data | Get Variable Instance (Binary)
+*HistoricVariableInstanceApi* | [**getHistoricVariableInstances**](docs/Api/HistoricVariableInstanceApi.md#gethistoricvariableinstances) | **GET** /history/variable-instance | Get Variable Instances
+*HistoricVariableInstanceApi* | [**getHistoricVariableInstancesCount**](docs/Api/HistoricVariableInstanceApi.md#gethistoricvariableinstancescount) | **GET** /history/variable-instance/count | Get Variable Instance Count
+*HistoricVariableInstanceApi* | [**queryHistoricVariableInstances**](docs/Api/HistoricVariableInstanceApi.md#queryhistoricvariableinstances) | **POST** /history/variable-instance | Get Variable Instances (POST)
+*HistoricVariableInstanceApi* | [**queryHistoricVariableInstancesCount**](docs/Api/HistoricVariableInstanceApi.md#queryhistoricvariableinstancescount) | **POST** /history/variable-instance/count | Get Variable Instance Count (POST)
+*HistoryCleanupApi* | [**cleanupAsync**](docs/Api/HistoryCleanupApi.md#cleanupasync) | **POST** /history/cleanup | Clean up history (POST)
+*HistoryCleanupApi* | [**findCleanupJob**](docs/Api/HistoryCleanupApi.md#findcleanupjob) | **GET** /history/cleanup/job | Find clean up history job (GET)
+*HistoryCleanupApi* | [**findCleanupJobs**](docs/Api/HistoryCleanupApi.md#findcleanupjobs) | **GET** /history/cleanup/jobs | Find clean up history jobs (GET)
+*HistoryCleanupApi* | [**getHistoryCleanupConfiguration**](docs/Api/HistoryCleanupApi.md#gethistorycleanupconfiguration) | **GET** /history/cleanup/configuration | Get History Cleanup Configuration
 *IdentityApi* | [**checkPassword**](docs/Api/IdentityApi.md#checkpassword) | **POST** /identity/password-policy | Validate Password
 *IdentityApi* | [**getGroupInfo**](docs/Api/IdentityApi.md#getgroupinfo) | **GET** /identity/groups | Get a User&#39;s Groups
 *IdentityApi* | [**getPasswordPolicy**](docs/Api/IdentityApi.md#getpasswordpolicy) | **GET** /identity/password-policy | Get Password Policy
@@ -194,10 +286,25 @@ Class | Method | HTTP request | Description
 *JobApi* | [**setJobRetriesAsyncOperation**](docs/Api/JobApi.md#setjobretriesasyncoperation) | **POST** /job/retries | Set Job Retries Async (POST)
 *JobApi* | [**updateJobSuspensionState**](docs/Api/JobApi.md#updatejobsuspensionstate) | **PUT** /job/{id}/suspended | Activate/Suspend Job By Id
 *JobApi* | [**updateSuspensionStateBy**](docs/Api/JobApi.md#updatesuspensionstateby) | **PUT** /job/suspended | Activate/Suspend Jobs
+*JobDefinitionApi* | [**getJobDefinition**](docs/Api/JobDefinitionApi.md#getjobdefinition) | **GET** /job-definition/{id} | Get Job Definition
+*JobDefinitionApi* | [**getJobDefinitions**](docs/Api/JobDefinitionApi.md#getjobdefinitions) | **GET** /job-definition | Get Job Definitions
+*JobDefinitionApi* | [**getJobDefinitionsCount**](docs/Api/JobDefinitionApi.md#getjobdefinitionscount) | **GET** /job-definition/count | Get Job Definition Count
+*JobDefinitionApi* | [**queryJobDefinitions**](docs/Api/JobDefinitionApi.md#queryjobdefinitions) | **POST** /job-definition | Get Job Definitions (POST)
+*JobDefinitionApi* | [**queryJobDefinitionsCount**](docs/Api/JobDefinitionApi.md#queryjobdefinitionscount) | **POST** /job-definition/count | Get Job Definition Count (POST)
+*JobDefinitionApi* | [**setJobPriorityJobDefinition**](docs/Api/JobDefinitionApi.md#setjobpriorityjobdefinition) | **PUT** /job-definition/{id}/jobPriority | Set Job Definition Priority by Id
+*JobDefinitionApi* | [**setJobRetriesJobDefinition**](docs/Api/JobDefinitionApi.md#setjobretriesjobdefinition) | **PUT** /job-definition/{id}/retries | Set Job Retries By Job Definition Id
+*JobDefinitionApi* | [**updateSuspensionStateJobDefinition**](docs/Api/JobDefinitionApi.md#updatesuspensionstatejobdefinition) | **PUT** /job-definition/{id}/suspended | Activate/Suspend Job Definition By Id
+*JobDefinitionApi* | [**updateSuspensionStateJobDefinitions**](docs/Api/JobDefinitionApi.md#updatesuspensionstatejobdefinitions) | **PUT** /job-definition/suspended | Activate/Suspend Job Definitions
 *MessageApi* | [**deliverMessage**](docs/Api/MessageApi.md#delivermessage) | **POST** /message | Correlate
 *MetricsApi* | [**deleteTaskMetrics**](docs/Api/MetricsApi.md#deletetaskmetrics) | **DELETE** /metrics/task-worker | Delete Task Worker Metrics
 *MetricsApi* | [**getMetrics**](docs/Api/MetricsApi.md#getmetrics) | **GET** /metrics/{metrics-name}/sum | Get Sum
 *MetricsApi* | [**interval**](docs/Api/MetricsApi.md#interval) | **GET** /metrics | Get Metrics in Interval
+*MigrationApi* | [**executeMigrationPlan**](docs/Api/MigrationApi.md#executemigrationplan) | **POST** /migration/execute | Execute Migration Plan
+*MigrationApi* | [**executeMigrationPlanAsync**](docs/Api/MigrationApi.md#executemigrationplanasync) | **POST** /migration/executeAsync | Execute Migration Plan Async (Batch)
+*MigrationApi* | [**generateMigrationPlan**](docs/Api/MigrationApi.md#generatemigrationplan) | **POST** /migration/generate | Generate Migration Plan
+*MigrationApi* | [**validateMigrationPlan**](docs/Api/MigrationApi.md#validatemigrationplan) | **POST** /migration/validate | Validate Migration Plan
+*ModificationApi* | [**executeModification**](docs/Api/ModificationApi.md#executemodification) | **POST** /modification/execute | Execute Modification
+*ModificationApi* | [**executeModificationAsync**](docs/Api/ModificationApi.md#executemodificationasync) | **POST** /modification/executeAsync | Execute Modification Async (Batch)
 *ProcessDefinitionApi* | [**deleteProcessDefinition**](docs/Api/ProcessDefinitionApi.md#deleteprocessdefinition) | **DELETE** /process-definition/{id} | Delete
 *ProcessDefinitionApi* | [**deleteProcessDefinitionsByKey**](docs/Api/ProcessDefinitionApi.md#deleteprocessdefinitionsbykey) | **DELETE** /process-definition/key/{key} | Delete By Key
 *ProcessDefinitionApi* | [**deleteProcessDefinitionsByKeyAndTenantId**](docs/Api/ProcessDefinitionApi.md#deleteprocessdefinitionsbykeyandtenantid) | **DELETE** /process-definition/key/{key}/tenant-id/{tenant-id} | Delete By Key
@@ -361,8 +468,12 @@ Class | Method | HTTP request | Description
 - [AttachmentDto](docs/Model/AttachmentDto.md)
 - [AttachmentDtoAllOf](docs/Model/AttachmentDtoAllOf.md)
 - [AuthenticationResult](docs/Model/AuthenticationResult.md)
+- [AuthorizationCheckResultDto](docs/Model/AuthorizationCheckResultDto.md)
+- [AuthorizationCreateDto](docs/Model/AuthorizationCreateDto.md)
+- [AuthorizationDto](docs/Model/AuthorizationDto.md)
 - [AuthorizationExceptionDto](docs/Model/AuthorizationExceptionDto.md)
 - [AuthorizationExceptionDtoAllOf](docs/Model/AuthorizationExceptionDtoAllOf.md)
+- [AuthorizationUpdateDto](docs/Model/AuthorizationUpdateDto.md)
 - [BasicUserCredentialsDto](docs/Model/BasicUserCredentialsDto.md)
 - [BatchDto](docs/Model/BatchDto.md)
 - [BatchStatisticsDto](docs/Model/BatchStatisticsDto.md)
@@ -372,6 +483,9 @@ Class | Method | HTTP request | Description
 - [CheckPasswordPolicyResultDtoAllOf](docs/Model/CheckPasswordPolicyResultDtoAllOf.md)
 - [CheckPasswordPolicyRuleDto](docs/Model/CheckPasswordPolicyRuleDto.md)
 - [CheckPasswordPolicyRuleDtoAllOf](docs/Model/CheckPasswordPolicyRuleDtoAllOf.md)
+- [CleanableHistoricBatchReportResultDto](docs/Model/CleanableHistoricBatchReportResultDto.md)
+- [CleanableHistoricDecisionInstanceReportResultDto](docs/Model/CleanableHistoricDecisionInstanceReportResultDto.md)
+- [CleanableHistoricProcessInstanceReportResultDto](docs/Model/CleanableHistoricProcessInstanceReportResultDto.md)
 - [CommentDto](docs/Model/CommentDto.md)
 - [CommentDtoAllOf](docs/Model/CommentDtoAllOf.md)
 - [CompleteExternalTaskDto](docs/Model/CompleteExternalTaskDto.md)
@@ -380,10 +494,13 @@ Class | Method | HTTP request | Description
 - [ConditionQueryParameterDto](docs/Model/ConditionQueryParameterDto.md)
 - [CorrelationMessageDto](docs/Model/CorrelationMessageDto.md)
 - [CountResultDto](docs/Model/CountResultDto.md)
+- [CreateFilterDto](docs/Model/CreateFilterDto.md)
 - [CreateIncidentDto](docs/Model/CreateIncidentDto.md)
 - [DecisionDefinitionDiagramDto](docs/Model/DecisionDefinitionDiagramDto.md)
 - [DecisionDefinitionDto](docs/Model/DecisionDefinitionDto.md)
 - [DecisionRequirementsDefinitionDto](docs/Model/DecisionRequirementsDefinitionDto.md)
+- [DecisionRequirementsDefinitionXmlDto](docs/Model/DecisionRequirementsDefinitionXmlDto.md)
+- [DeleteHistoricDecisionInstancesDto](docs/Model/DeleteHistoricDecisionInstancesDto.md)
 - [DeleteHistoricProcessInstancesDto](docs/Model/DeleteHistoricProcessInstancesDto.md)
 - [DeleteProcessInstancesDto](docs/Model/DeleteProcessInstancesDto.md)
 - [DeploymentDto](docs/Model/DeploymentDto.md)
@@ -413,6 +530,7 @@ Class | Method | HTTP request | Description
 - [ExternalTaskQueryDtoSorting](docs/Model/ExternalTaskQueryDtoSorting.md)
 - [FetchExternalTaskTopicDto](docs/Model/FetchExternalTaskTopicDto.md)
 - [FetchExternalTasksDto](docs/Model/FetchExternalTasksDto.md)
+- [FilterDto](docs/Model/FilterDto.md)
 - [FormDto](docs/Model/FormDto.md)
 - [GroupDto](docs/Model/GroupDto.md)
 - [GroupQueryDto](docs/Model/GroupQueryDto.md)
@@ -421,9 +539,38 @@ Class | Method | HTTP request | Description
 - [HistoricActivityInstanceDto](docs/Model/HistoricActivityInstanceDto.md)
 - [HistoricActivityInstanceQueryDto](docs/Model/HistoricActivityInstanceQueryDto.md)
 - [HistoricActivityInstanceQueryDtoSorting](docs/Model/HistoricActivityInstanceQueryDtoSorting.md)
+- [HistoricActivityStatisticsDto](docs/Model/HistoricActivityStatisticsDto.md)
+- [HistoricBatchDto](docs/Model/HistoricBatchDto.md)
+- [HistoricBatchQueryDto](docs/Model/HistoricBatchQueryDto.md)
+- [HistoricBatchQueryDtoSorting](docs/Model/HistoricBatchQueryDtoSorting.md)
+- [HistoricDecisionInputInstanceDto](docs/Model/HistoricDecisionInputInstanceDto.md)
+- [HistoricDecisionInstanceDto](docs/Model/HistoricDecisionInstanceDto.md)
+- [HistoricDecisionInstanceQueryDto](docs/Model/HistoricDecisionInstanceQueryDto.md)
+- [HistoricDecisionInstanceStatisticsDto](docs/Model/HistoricDecisionInstanceStatisticsDto.md)
+- [HistoricDecisionOutputInstanceDto](docs/Model/HistoricDecisionOutputInstanceDto.md)
+- [HistoricDetailDto](docs/Model/HistoricDetailDto.md)
+- [HistoricDetailQueryDto](docs/Model/HistoricDetailQueryDto.md)
+- [HistoricDetailQueryDtoSorting](docs/Model/HistoricDetailQueryDtoSorting.md)
+- [HistoricExternalTaskLogDto](docs/Model/HistoricExternalTaskLogDto.md)
+- [HistoricExternalTaskLogQueryDto](docs/Model/HistoricExternalTaskLogQueryDto.md)
+- [HistoricExternalTaskLogQueryDtoSorting](docs/Model/HistoricExternalTaskLogQueryDtoSorting.md)
+- [HistoricIdentityLinkLogDto](docs/Model/HistoricIdentityLinkLogDto.md)
+- [HistoricIncidentDto](docs/Model/HistoricIncidentDto.md)
+- [HistoricJobLogDto](docs/Model/HistoricJobLogDto.md)
+- [HistoricJobLogQueryDto](docs/Model/HistoricJobLogQueryDto.md)
+- [HistoricJobLogQueryDtoSorting](docs/Model/HistoricJobLogQueryDtoSorting.md)
 - [HistoricProcessInstanceDto](docs/Model/HistoricProcessInstanceDto.md)
 - [HistoricProcessInstanceQueryDto](docs/Model/HistoricProcessInstanceQueryDto.md)
 - [HistoricProcessInstanceQueryDtoSorting](docs/Model/HistoricProcessInstanceQueryDtoSorting.md)
+- [HistoricTaskInstanceDto](docs/Model/HistoricTaskInstanceDto.md)
+- [HistoricTaskInstanceQueryDto](docs/Model/HistoricTaskInstanceQueryDto.md)
+- [HistoricTaskInstanceQueryDtoSorting](docs/Model/HistoricTaskInstanceQueryDtoSorting.md)
+- [HistoricTaskInstanceReportResultDto](docs/Model/HistoricTaskInstanceReportResultDto.md)
+- [HistoricVariableInstanceDto](docs/Model/HistoricVariableInstanceDto.md)
+- [HistoricVariableInstanceDtoAllOf](docs/Model/HistoricVariableInstanceDtoAllOf.md)
+- [HistoricVariableInstanceQueryDto](docs/Model/HistoricVariableInstanceQueryDto.md)
+- [HistoricVariableInstanceQueryDtoSorting](docs/Model/HistoricVariableInstanceQueryDtoSorting.md)
+- [HistoryCleanupConfigurationDto](docs/Model/HistoryCleanupConfigurationDto.md)
 - [HistoryTimeToLiveDto](docs/Model/HistoryTimeToLiveDto.md)
 - [IdentityLinkDto](docs/Model/IdentityLinkDto.md)
 - [IdentityServiceGroupDto](docs/Model/IdentityServiceGroupDto.md)
@@ -432,6 +579,14 @@ Class | Method | HTTP request | Description
 - [IncidentDto](docs/Model/IncidentDto.md)
 - [IncidentStatisticsResultDto](docs/Model/IncidentStatisticsResultDto.md)
 - [JobConditionQueryParameterDto](docs/Model/JobConditionQueryParameterDto.md)
+- [JobDefinitionDto](docs/Model/JobDefinitionDto.md)
+- [JobDefinitionPriorityDto](docs/Model/JobDefinitionPriorityDto.md)
+- [JobDefinitionQueryDto](docs/Model/JobDefinitionQueryDto.md)
+- [JobDefinitionQueryDtoSorting](docs/Model/JobDefinitionQueryDtoSorting.md)
+- [JobDefinitionSuspensionStateDto](docs/Model/JobDefinitionSuspensionStateDto.md)
+- [JobDefinitionSuspensionStateDtoAllOf](docs/Model/JobDefinitionSuspensionStateDtoAllOf.md)
+- [JobDefinitionsSuspensionStateDto](docs/Model/JobDefinitionsSuspensionStateDto.md)
+- [JobDefinitionsSuspensionStateDtoAllOf](docs/Model/JobDefinitionsSuspensionStateDtoAllOf.md)
 - [JobDto](docs/Model/JobDto.md)
 - [JobDuedateDto](docs/Model/JobDuedateDto.md)
 - [JobQueryDto](docs/Model/JobQueryDto.md)
@@ -445,7 +600,17 @@ Class | Method | HTTP request | Description
 - [MessageCorrelationResultWithVariableDto](docs/Model/MessageCorrelationResultWithVariableDto.md)
 - [MetricsIntervalResultDto](docs/Model/MetricsIntervalResultDto.md)
 - [MetricsResultDto](docs/Model/MetricsResultDto.md)
+- [MigrationExecutionDto](docs/Model/MigrationExecutionDto.md)
+- [MigrationInstructionDto](docs/Model/MigrationInstructionDto.md)
+- [MigrationInstructionValidationReportDto](docs/Model/MigrationInstructionValidationReportDto.md)
+- [MigrationPlanDto](docs/Model/MigrationPlanDto.md)
+- [MigrationPlanGenerationDto](docs/Model/MigrationPlanGenerationDto.md)
+- [MigrationPlanReportDto](docs/Model/MigrationPlanReportDto.md)
+- [MigrationVariableValidationReportDto](docs/Model/MigrationVariableValidationReportDto.md)
+- [MigrationVariableValidationReportDtoAllOf](docs/Model/MigrationVariableValidationReportDtoAllOf.md)
 - [MissingAuthorizationDto](docs/Model/MissingAuthorizationDto.md)
+- [ModificationDto](docs/Model/ModificationDto.md)
+- [MultipleProcessInstanceModificationInstructionDto](docs/Model/MultipleProcessInstanceModificationInstructionDto.md)
 - [ParseExceptionDto](docs/Model/ParseExceptionDto.md)
 - [ParseExceptionDtoAllOf](docs/Model/ParseExceptionDtoAllOf.md)
 - [PasswordPolicyDto](docs/Model/PasswordPolicyDto.md)
@@ -482,6 +647,10 @@ Class | Method | HTTP request | Description
 - [SchemaLogQueryDtoSorting](docs/Model/SchemaLogQueryDtoSorting.md)
 - [SetJobRetriesByProcessDto](docs/Model/SetJobRetriesByProcessDto.md)
 - [SetJobRetriesDto](docs/Model/SetJobRetriesDto.md)
+- [SetRemovalTimeToHistoricBatchesDto](docs/Model/SetRemovalTimeToHistoricBatchesDto.md)
+- [SetRemovalTimeToHistoricBatchesDtoAllOf](docs/Model/SetRemovalTimeToHistoricBatchesDtoAllOf.md)
+- [SetRemovalTimeToHistoricDecisionInstancesDto](docs/Model/SetRemovalTimeToHistoricDecisionInstancesDto.md)
+- [SetRemovalTimeToHistoricDecisionInstancesDtoAllOf](docs/Model/SetRemovalTimeToHistoricDecisionInstancesDtoAllOf.md)
 - [SetRemovalTimeToHistoricProcessInstancesDto](docs/Model/SetRemovalTimeToHistoricProcessInstancesDto.md)
 - [SetRemovalTimeToHistoricProcessInstancesDtoAllOf](docs/Model/SetRemovalTimeToHistoricProcessInstancesDtoAllOf.md)
 - [SetRetriesForExternalTasksDto](docs/Model/SetRetriesForExternalTasksDto.md)
@@ -504,6 +673,7 @@ Class | Method | HTTP request | Description
 - [UserCredentialsDto](docs/Model/UserCredentialsDto.md)
 - [UserDto](docs/Model/UserDto.md)
 - [UserIdDto](docs/Model/UserIdDto.md)
+- [UserOperationLogEntryDto](docs/Model/UserOperationLogEntryDto.md)
 - [UserProfileDto](docs/Model/UserProfileDto.md)
 - [VariableInstanceDto](docs/Model/VariableInstanceDto.md)
 - [VariableInstanceDtoAllOf](docs/Model/VariableInstanceDtoAllOf.md)
@@ -533,5 +703,5 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `7.15.0`
+- API version: `7.16.0-alpha2`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

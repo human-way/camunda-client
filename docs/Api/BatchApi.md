@@ -134,7 +134,7 @@ getBatchStatistics($sort_by, $sort_order, $first_result, $max_results, $batch_id
 
 Get Statistics
 
-Queries for batch statistics that fulfill given parameters. Parameters may be the properties of batches, such as the id or type. The size of the result set can be retrieved by using the  [Get Batch Statistics Count](https://docs.camunda.org/manual/7.15/reference/rest/batch/get-statistics-query-count/) method.
+Queries for batch statistics that fulfill given parameters. Parameters may be the properties of batches, such as the id or type. The size of the result set can be retrieved by using the  [Get Batch Statistics Count](https://docs.camunda.org/manual/latest/reference/rest/batch/get-statistics-query-count/) method.
 
 ### Example
 
@@ -154,7 +154,7 @@ $sort_order = 'sort_order_example'; // string | Sort the results in a given orde
 $first_result = 56; // int | Pagination of results. Specifies the index of the first result to return.
 $max_results = 56; // int | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left.
 $batch_id = 'batch_id_example'; // string | Filter by batch id.
-$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
+$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of `Strings`. A batch matches if it has one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include batches which belong to no tenant. Value can effectively only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | A `Boolean` value which indicates whether only active or suspended batches should be included. When the value is set to `true`, only suspended batches will be returned and when the value is set to `false`, only active batches will be returned.
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
  **first_result** | **int**| Pagination of results. Specifies the index of the first result to return. | [optional]
  **max_results** | **int**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]
  **batch_id** | **string**| Filter by batch id. | [optional]
- **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
+ **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of &#x60;Strings&#x60;. A batch matches if it has one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include batches which belong to no tenant. Value can effectively only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| A &#x60;Boolean&#x60; value which indicates whether only active or suspended batches should be included. When the value is set to &#x60;true&#x60;, only suspended batches will be returned and when the value is set to &#x60;false&#x60;, only active batches will be returned. | [optional]
@@ -206,7 +206,7 @@ getBatchStatisticsCount($batch_id, $type, $tenant_id_in, $without_tenant_id, $su
 
 Get Statistics Count
 
-Requests the number of batch statistics that fulfill the query criteria. Takes the same filtering parameters as the [Get Batch Statistics](https://docs.camunda.org/manual/7.15/reference/rest/batch/get-statistics-query/) method.
+Requests the number of batch statistics that fulfill the query criteria. Takes the same filtering parameters as the [Get Batch Statistics](https://docs.camunda.org/manual/latest/reference/rest/batch/get-statistics-query/) method.
 
 ### Example
 
@@ -222,7 +222,7 @@ $apiInstance = new OpenAPI\Client\Api\BatchApi(
     new GuzzleHttp\Client()
 );
 $batch_id = 'batch_id_example'; // string | Filter by batch id.
-$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
+$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of `Strings`. A batch matches if it has one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include batches which belong to no tenant. Value can effectively only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | A `Boolean` value which indicates whether only active or suspended batches should be included. When the value is set to `true`, only suspended batches will be returned and when the value is set to `false`, only active batches will be returned.
@@ -240,7 +240,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **string**| Filter by batch id. | [optional]
- **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
+ **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of &#x60;Strings&#x60;. A batch matches if it has one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include batches which belong to no tenant. Value can effectively only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| A &#x60;Boolean&#x60; value which indicates whether only active or suspended batches should be included. When the value is set to &#x60;true&#x60;, only suspended batches will be returned and when the value is set to &#x60;false&#x60;, only active batches will be returned. | [optional]
@@ -270,7 +270,7 @@ getBatches($sort_by, $sort_order, $first_result, $max_results, $batch_id, $type,
 
 Get List
 
-Queries for batches that fulfill given parameters. Parameters may be the properties of batches, such as the id or type. The size of the result set can be retrieved by using the [Get Batch Count](https://docs.camunda.org/manual/7.15/reference/rest/batch/get-query-count/) method.
+Queries for batches that fulfill given parameters. Parameters may be the properties of batches, such as the id or type. The size of the result set can be retrieved by using the [Get Batch Count](https://docs.camunda.org/manual/latest/reference/rest/batch/get-query-count/) method.
 
 ### Example
 
@@ -290,7 +290,7 @@ $sort_order = 'sort_order_example'; // string | Sort the results in a given orde
 $first_result = 56; // int | Pagination of results. Specifies the index of the first result to return.
 $max_results = 56; // int | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left.
 $batch_id = 'batch_id_example'; // string | Filter by batch id.
-$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
+$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of `Strings`. A batch matches if it has one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include batches which belong to no tenant. Value can effectively only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | A `Boolean` value which indicates whether only active or suspended batches should be included. When the value is set to `true`, only suspended batches will be returned and when the value is set to `false`, only active batches will be returned.
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
  **first_result** | **int**| Pagination of results. Specifies the index of the first result to return. | [optional]
  **max_results** | **int**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]
  **batch_id** | **string**| Filter by batch id. | [optional]
- **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
+ **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of &#x60;Strings&#x60;. A batch matches if it has one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include batches which belong to no tenant. Value can effectively only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| A &#x60;Boolean&#x60; value which indicates whether only active or suspended batches should be included. When the value is set to &#x60;true&#x60;, only suspended batches will be returned and when the value is set to &#x60;false&#x60;, only active batches will be returned. | [optional]
@@ -342,7 +342,7 @@ getBatchesCount($batch_id, $type, $tenant_id_in, $without_tenant_id, $suspended)
 
 Get List Count
 
-Requests the number of batches that fulfill the query criteria. Takes the same filtering parameters as the [Get Batches](https://docs.camunda.org/manual/7.15/reference/rest/batch/get-query/) method.
+Requests the number of batches that fulfill the query criteria. Takes the same filtering parameters as the [Get Batches](https://docs.camunda.org/manual/latest/reference/rest/batch/get-query/) method.
 
 ### Example
 
@@ -358,7 +358,7 @@ $apiInstance = new OpenAPI\Client\Api\BatchApi(
     new GuzzleHttp\Client()
 );
 $batch_id = 'batch_id_example'; // string | Filter by batch id.
-$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
+$type = 'type_example'; // string | Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of `Strings`. A batch matches if it has one of the given tenant ids.
 $without_tenant_id = True; // bool | Only include batches which belong to no tenant. Value can effectively only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | A `Boolean` value which indicates whether only active or suspended batches should be included. When the value is set to `true`, only suspended batches will be returned and when the value is set to `false`, only active batches will be returned.
@@ -376,7 +376,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **string**| Filter by batch id. | [optional]
- **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
+ **type** | **string**| Filter by batch type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of &#x60;Strings&#x60;. A batch matches if it has one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include batches which belong to no tenant. Value can effectively only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| A &#x60;Boolean&#x60; value which indicates whether only active or suspended batches should be included. When the value is set to &#x60;true&#x60;, only suspended batches will be returned and when the value is set to &#x60;false&#x60;, only active batches will be returned. | [optional]

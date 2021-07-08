@@ -378,7 +378,7 @@ getDeployments($id, $name, $name_like, $source, $without_source, $tenant_id_in, 
 
 Get List
 
-Queries for deployments that fulfill given parameters. Parameters may be the properties of deployments, such as the id or name or a range of the deployment time. The size of the result set can be retrieved by using the [Get Deployment count](https://docs.camunda.org/manual/7.15/reference/rest/deployment/get-query-count/) method.
+Queries for deployments that fulfill given parameters. Parameters may be the properties of deployments, such as the id or name or a range of the deployment time. The size of the result set can be retrieved by using the [Get Deployment count](https://docs.camunda.org/manual/latest/reference/rest/deployment/get-query-count/) method.
 
 ### Example
 
@@ -401,8 +401,8 @@ $without_source = false; // bool | Filter by the deployment source whereby sourc
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of tenant ids. A deployment must have one of the given tenant ids.
 $without_tenant_id = false; // bool | Only include deployments which belong to no tenant. Value may only be `true`, as `false` is the default behavior.
 $include_deployments_without_tenant_id = false; // bool | Include deployments which belong to no tenant. Can be used in combination with `tenantIdIn`. Value may only be `true`, as `false` is the default behavior.
-$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 $sort_by = 'sort_by_example'; // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter.
 $sort_order = 'sort_order_example'; // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter.
 $first_result = 56; // int | Pagination of results. Specifies the index of the first result to return.
@@ -428,8 +428,8 @@ Name | Type | Description  | Notes
  **tenant_id_in** | **string**| Filter by a comma-separated list of tenant ids. A deployment must have one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include deployments which belong to no tenant. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] [default to false]
  **include_deployments_without_tenant_id** | **bool**| Include deployments which belong to no tenant. Can be used in combination with &#x60;tenantIdIn&#x60;. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] [default to false]
- **after** | **\DateTime**| Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **before** | **\DateTime**| Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **after** | **\DateTime**| Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **before** | **\DateTime**| Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
  **sort_by** | **string**| Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional]
  **sort_order** | **string**| Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional]
  **first_result** | **int**| Pagination of results. Specifies the index of the first result to return. | [optional]
@@ -460,7 +460,7 @@ getDeploymentsCount($id, $name, $name_like, $source, $without_source, $tenant_id
 
 Get List Count
 
-Queries for the number of deployments that fulfill given parameters. Takes the same parameters as the [Get Deployments](https://docs.camunda.org/manual/7.15/reference/rest/deployment/get-query/) method.
+Queries for the number of deployments that fulfill given parameters. Takes the same parameters as the [Get Deployments](https://docs.camunda.org/manual/latest/reference/rest/deployment/get-query/) method.
 
 ### Example
 
@@ -483,8 +483,8 @@ $without_source = false; // bool | Filter by the deployment source whereby sourc
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of tenant ids. A deployment must have one of the given tenant ids.
 $without_tenant_id = false; // bool | Only include deployments which belong to no tenant. Value may only be `true`, as `false` is the default behavior.
 $include_deployments_without_tenant_id = false; // bool | Include deployments which belong to no tenant. Can be used in combination with `tenantIdIn`. Value may only be `true`, as `false` is the default behavior.
-$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 
 try {
     $result = $apiInstance->getDeploymentsCount($id, $name, $name_like, $source, $without_source, $tenant_id_in, $without_tenant_id, $include_deployments_without_tenant_id, $after, $before);
@@ -506,8 +506,8 @@ Name | Type | Description  | Notes
  **tenant_id_in** | **string**| Filter by a comma-separated list of tenant ids. A deployment must have one of the given tenant ids. | [optional]
  **without_tenant_id** | **bool**| Only include deployments which belong to no tenant. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] [default to false]
  **include_deployments_without_tenant_id** | **bool**| Include deployments which belong to no tenant. Can be used in combination with &#x60;tenantIdIn&#x60;. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] [default to false]
- **after** | **\DateTime**| Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **before** | **\DateTime**| Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **after** | **\DateTime**| Restricts to all deployments after the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **before** | **\DateTime**| Restricts to all deployments before the given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
 
 ### Return type
 
@@ -534,7 +534,7 @@ redeploy($id, $redeployment_dto): \OpenAPI\Client\Model\DeploymentWithDefinition
 
 Redeploy
 
-Re-deploys an existing deployment.  The deployment resources to re-deploy can be restricted by using the properties `resourceIds` or `resourceNames`. If no deployment resources to re-deploy are passed then all existing resources of the given deployment are re-deployed.  **Warning**: Deployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on [security considerations for custom code](https://docs.camunda.org/manual/7.15/user-guide/process-engine/securing-custom-code/) in the user guide for details.
+Re-deploys an existing deployment.  The deployment resources to re-deploy can be restricted by using the properties `resourceIds` or `resourceNames`. If no deployment resources to re-deploy are passed then all existing resources of the given deployment are re-deployed.  **Warning**: Deployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on [security considerations for custom code](https://docs.camunda.org/manual/latest/user-guide/process-engine/securing-custom-code/) in the user guide for details.
 
 ### Example
 

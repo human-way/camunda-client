@@ -16,7 +16,7 @@ getEventSubscriptions($event_subscription_id, $event_name, $event_type, $executi
 
 Get List
 
-Queries for event subscriptions that fulfill given parameters. The size of the result set can be retrieved by using the [Get Event Subscriptions count](https://docs.camunda.org/manual/7.15/reference/rest/event-subscription/get-query-count/) method.
+Queries for event subscriptions that fulfill given parameters. The size of the result set can be retrieved by using the [Get Event Subscriptions count](https://docs.camunda.org/manual/latest/reference/rest/event-subscription/get-query-count/) method.
 
 ### Example
 
@@ -96,7 +96,7 @@ getEventSubscriptionsCount($event_subscription_id, $event_name, $event_type, $ex
 
 Get List Count
 
-Queries for the number of event subscriptions that fulfill given parameters. Takes the same parameters as the [Get Event Subscriptions](https://docs.camunda.org/manual/7.15/reference/rest/event-subscription/get-query/) method.
+Queries for the number of event subscriptions that fulfill given parameters. Takes the same parameters as the [Get Event Subscriptions](https://docs.camunda.org/manual/latest/reference/rest/event-subscription/get-query/) method.
 
 ### Example
 

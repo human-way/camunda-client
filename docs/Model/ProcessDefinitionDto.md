@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **suspended** | **bool** | A flag indicating whether the definition is suspended or not. | [optional]
 **tenant_id** | **string** | The tenant id of the process definition. | [optional]
 **version_tag** | **string** | The version tag of the process definition. | [optional]
-**history_time_to_live** | **int** | History time to live value of the process definition. Is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup). | [optional]
+**history_time_to_live** | **int** | History time to live value of the process definition. Is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup). | [optional]
 **startable_in_tasklist** | **bool** | A flag indicating whether the process definition is startable in Tasklist or not. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

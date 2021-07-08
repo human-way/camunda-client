@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | The id of the batch. | [optional]
-**type** | **string** | The type of the batch. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
+**type** | **string** | The type of the batch. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/batch/#creating-a-batch) for more information about batch types. | [optional]
 **total_jobs** | **int** | The total jobs of a batch is the number of batch execution jobs required to complete the batch. | [optional]
 **jobs_created** | **int** | The number of batch execution jobs already created by the seed job. | [optional]
 **batch_jobs_per_seed** | **int** | The number of batch execution jobs created per seed job invocation. The batch seed job is invoked until it has created all batch execution jobs required by the batch (see &#x60;totalJobs&#x60; property). | [optional]

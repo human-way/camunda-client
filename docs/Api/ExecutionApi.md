@@ -201,7 +201,7 @@ getExecutions($business_key, $process_definition_id, $process_definition_key, $p
 
 Get Executions
 
-Queries for the executions that fulfill given parameters. Parameters may be static as well as dynamic runtime properties of executions. The size of the result set can be retrieved by using the [Get Execution Count](https://docs.camunda.org/manual/7.15/reference/rest/execution/get-query-count/) method.
+Queries for the executions that fulfill given parameters. Parameters may be static as well as dynamic runtime properties of executions. The size of the result set can be retrieved by using the [Get Execution Count](https://docs.camunda.org/manual/latest/reference/rest/execution/get-query-count/) method.
 
 ### Example
 
@@ -299,7 +299,7 @@ getExecutionsCount($business_key, $process_definition_id, $process_definition_ke
 
 Get Execution Count
 
-Queries for the number of executions that fulfill given parameters. Takes the same parameters as the [Get Executions](https://docs.camunda.org/manual/7.15/reference/rest/execution/get-query/) method.
+Queries for the number of executions that fulfill given parameters. Takes the same parameters as the [Get Executions](https://docs.camunda.org/manual/latest/reference/rest/execution/get-query/) method.
 
 ### Example
 
@@ -739,7 +739,7 @@ queryExecutions($first_result, $max_results, $execution_query_dto): \OpenAPI\Cli
 
 Get Executions (POST)
 
-Queries for executions that fulfill given parameters through a JSON object. This method is slightly more powerful than the [Get Executions](https://docs.camunda.org/manual/7.15/reference/rest/execution/get-query/) method because it allows to filter by multiple instance and execution variables of types `String`, `Number` or `Boolean`.
+Queries for executions that fulfill given parameters through a JSON object. This method is slightly more powerful than the [Get Executions](https://docs.camunda.org/manual/latest/reference/rest/execution/get-query/) method because it allows to filter by multiple instance and execution variables of types `String`, `Number` or `Boolean`.
 
 ### Example
 
@@ -799,7 +799,7 @@ queryExecutionsCount($execution_query_dto): \OpenAPI\Client\Model\CountResultDto
 
 Get Execution Count (POST)
 
-Queries for the number of executions that fulfill given parameters. This method takes the same message body as the [Get Executions POST](https://docs.camunda.org/manual/7.15/reference/rest/execution/post-query/) method and therefore it is slightly more powerful than the [Get Execution Count](https://docs.camunda.org/manual/7.15/reference/rest/execution/get-query-count/) method.
+Queries for the number of executions that fulfill given parameters. This method takes the same message body as the [Get Executions POST](https://docs.camunda.org/manual/latest/reference/rest/execution/post-query/) method and therefore it is slightly more powerful than the [Get Execution Count](https://docs.camunda.org/manual/latest/reference/rest/execution/get-query-count/) method.
 
 ### Example
 

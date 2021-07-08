@@ -540,7 +540,7 @@ getQueryGroups($sort_by, $sort_order, $first_result, $max_results, $id, $id_in, 
 
 Get List
 
-Queries for a list of groups using a list of parameters. The size of the result set can be retrieved by using the [Get Group Count](https://docs.camunda.org/manual/7.15/reference/rest/group/get-query-count) method.
+Queries for a list of groups using a list of parameters. The size of the result set can be retrieved by using the [Get Group Count](https://docs.camunda.org/manual/latest/reference/rest/group/get-query-count) method.
 
 ### Example
 
@@ -616,7 +616,7 @@ postQueryGroups($first_result, $max_results, $group_query_dto): \OpenAPI\Client\
 
 Get List (POST)
 
-Queries for a list of groups using a list of parameters. The size of the result set can be retrieved by using the [Get Group Count (POST)](https://docs.camunda.org/manual/7.15/reference/rest/group/post-query-count/) method.
+Queries for a list of groups using a list of parameters. The size of the result set can be retrieved by using the [Get Group Count (POST)](https://docs.camunda.org/manual/latest/reference/rest/group/post-query-count/) method.
 
 ### Example
 

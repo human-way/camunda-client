@@ -709,7 +709,7 @@ queryTenants($sort_by, $sort_order, $first_result, $max_results, $id, $name, $na
 
 Get Tenants
 
-Query for a list of tenants using a list of parameters. The size of the result set can be retrieved by using the [Get Tenant Count](https://docs.camunda.org/manual/7.15/reference/rest/tenant/get-query-count/) method.
+Query for a list of tenants using a list of parameters. The size of the result set can be retrieved by using the [Get Tenant Count](https://docs.camunda.org/manual/latest/reference/rest/tenant/get-query-count/) method.
 
 ### Example
 

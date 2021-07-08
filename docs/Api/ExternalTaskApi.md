@@ -314,7 +314,7 @@ getExternalTasks($external_task_id, $external_task_id_in, $topic_name, $worker_i
 
 Get List
 
-Queries for the external tasks that fulfill given parameters. Parameters may be static as well as dynamic runtime properties of executions. The size of the result set can be retrieved by using the [Get External Task Count](https://docs.camunda.org/manual/7.15/reference/rest/external-task/get-query-count/) method.
+Queries for the external tasks that fulfill given parameters. Parameters may be static as well as dynamic runtime properties of executions. The size of the result set can be retrieved by using the [Get External Task Count](https://docs.camunda.org/manual/latest/reference/rest/external-task/get-query-count/) method.
 
 ### Example
 
@@ -337,8 +337,8 @@ $locked = True; // bool | Only include external tasks that are currently locked 
 $not_locked = True; // bool | Only include external tasks that are currently not locked (i.e., they have no lock or it has expired). Value may only be `true`, as `false` matches any external task.
 $with_retries_left = True; // bool | Only include external tasks that have a positive (&gt; 0) number of retries (or `null`). Value may only be `true`, as `false` matches any external task.
 $no_retries_left = True; // bool | Only include external tasks that have 0 retries. Value may only be `true`, as `false` matches any external task.
-$lock_expiration_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$lock_expiration_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$lock_expiration_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$lock_expiration_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 $activity_id = 'activity_id_example'; // string | Filter by the id of the activity that an external task is created for.
 $activity_id_in = 'activity_id_in_example'; // string | Filter by the comma-separated list of ids of the activities that an external task is created for.
 $execution_id = 'execution_id_example'; // string | Filter by the id of the execution that an external task belongs to.
@@ -375,8 +375,8 @@ Name | Type | Description  | Notes
  **not_locked** | **bool**| Only include external tasks that are currently not locked (i.e., they have no lock or it has expired). Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
  **with_retries_left** | **bool**| Only include external tasks that have a positive (&amp;gt; 0) number of retries (or &#x60;null&#x60;). Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
  **no_retries_left** | **bool**| Only include external tasks that have 0 retries. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
- **lock_expiration_after** | **\DateTime**| Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **lock_expiration_before** | **\DateTime**| Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **lock_expiration_after** | **\DateTime**| Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **lock_expiration_before** | **\DateTime**| Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
  **activity_id** | **string**| Filter by the id of the activity that an external task is created for. | [optional]
  **activity_id_in** | **string**| Filter by the comma-separated list of ids of the activities that an external task is created for. | [optional]
  **execution_id** | **string**| Filter by the id of the execution that an external task belongs to. | [optional]
@@ -418,7 +418,7 @@ getExternalTasksCount($external_task_id, $external_task_id_in, $topic_name, $wor
 
 Get List Count
 
-Queries for the number of external tasks that fulfill given parameters. Takes the same parameters as the [Get External Tasks](https://docs.camunda.org/manual/7.15/reference/rest/external-task/get-query/) method.
+Queries for the number of external tasks that fulfill given parameters. Takes the same parameters as the [Get External Tasks](https://docs.camunda.org/manual/latest/reference/rest/external-task/get-query/) method.
 
 ### Example
 
@@ -441,8 +441,8 @@ $locked = True; // bool | Only include external tasks that are currently locked 
 $not_locked = True; // bool | Only include external tasks that are currently not locked (i.e., they have no lock or it has expired). Value may only be `true`, as `false` matches any external task.
 $with_retries_left = True; // bool | Only include external tasks that have a positive (&gt; 0) number of retries (or `null`). Value may only be `true`, as `false` matches any external task.
 $no_retries_left = True; // bool | Only include external tasks that have 0 retries. Value may only be `true`, as `false` matches any external task.
-$lock_expiration_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
-$lock_expiration_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$lock_expiration_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
+$lock_expiration_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.000+0200`.
 $activity_id = 'activity_id_example'; // string | Filter by the id of the activity that an external task is created for.
 $activity_id_in = 'activity_id_in_example'; // string | Filter by the comma-separated list of ids of the activities that an external task is created for.
 $execution_id = 'execution_id_example'; // string | Filter by the id of the execution that an external task belongs to.
@@ -475,8 +475,8 @@ Name | Type | Description  | Notes
  **not_locked** | **bool**| Only include external tasks that are currently not locked (i.e., they have no lock or it has expired). Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
  **with_retries_left** | **bool**| Only include external tasks that have a positive (&amp;gt; 0) number of retries (or &#x60;null&#x60;). Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
  **no_retries_left** | **bool**| Only include external tasks that have 0 retries. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; matches any external task. | [optional]
- **lock_expiration_after** | **\DateTime**| Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
- **lock_expiration_before** | **\DateTime**| Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **lock_expiration_after** | **\DateTime**| Restrict to external tasks that have a lock that expires after a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
+ **lock_expiration_before** | **\DateTime**| Restrict to external tasks that have a lock that expires before a given date. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.000+0200&#x60;. | [optional]
  **activity_id** | **string**| Filter by the id of the activity that an external task is created for. | [optional]
  **activity_id_in** | **string**| Filter by the comma-separated list of ids of the activities that an external task is created for. | [optional]
  **execution_id** | **string**| Filter by the id of the execution that an external task belongs to. | [optional]
@@ -745,7 +745,7 @@ queryExternalTasks($first_result, $max_results, $external_task_query_dto): \Open
 
 Get List (POST)
 
-Queries for external tasks that fulfill given parameters in the form of a JSON object.  This method is slightly more powerful than the [Get External Tasks](https://docs.camunda.org/manual/7.15/reference/rest/external-task/get-query/) method because it allows to specify a hierarchical result sorting.
+Queries for external tasks that fulfill given parameters in the form of a JSON object.  This method is slightly more powerful than the [Get External Tasks](https://docs.camunda.org/manual/latest/reference/rest/external-task/get-query/) method because it allows to specify a hierarchical result sorting.
 
 ### Example
 
@@ -805,7 +805,7 @@ queryExternalTasksCount($external_task_query_dto): \OpenAPI\Client\Model\CountRe
 
 Get List Count (POST)
 
-Queries for the number of external tasks that fulfill given parameters. This method takes the same message body as the [Get External Tasks (POST)](https://docs.camunda.org/manual/7.15/reference/rest/external-task/post-query/) method.
+Queries for the number of external tasks that fulfill given parameters. This method takes the same message body as the [Get External Tasks (POST)](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-query/) method.
 
 ### Example
 

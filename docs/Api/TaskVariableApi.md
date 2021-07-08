@@ -21,7 +21,7 @@ deleteTaskVariable($id, $var_name)
 
 Delete Task Variable
 
-Removes a variable that is visible to a task. A variable is visible to a task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Removes a variable that is visible to a task. A variable is visible to a task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 
@@ -78,7 +78,7 @@ getTaskVariable($id, $var_name, $deserialize_value): \OpenAPI\Client\Model\Varia
 
 Get Task Variable
 
-Retrieves a variable from the context of a given task. The variable must be visible from the task. It is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Retrieves a variable from the context of a given task. The variable must be visible from the task. It is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 
@@ -138,7 +138,7 @@ getTaskVariableBinary($id, $var_name): \SplFileObject
 
 Get Task Variable (Binary)
 
-Retrieves a binary variable from the context of a given task. Applicable for byte array and file variables. The variable must be visible from the task. It is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Retrieves a binary variable from the context of a given task. Applicable for byte array and file variables. The variable must be visible from the task. It is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 
@@ -196,7 +196,7 @@ getTaskVariables($id, $deserialize_values): array<string,\OpenAPI\Client\Model\V
 
 Get Task Variables
 
-Retrieves all variables visible from the task. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Retrieves all variables visible from the task. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 
@@ -254,7 +254,7 @@ modifyTaskVariables($id, $patch_variables_dto)
 
 Update/Delete Task Variables
 
-Updates or deletes the variables visible from the task. Updates precede deletions. So, if a variable is updated AND deleted, the deletion overrides the update. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Updates or deletes the variables visible from the task. Updates precede deletions. So, if a variable is updated AND deleted, the deletion overrides the update. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 
@@ -311,7 +311,7 @@ putTaskVariable($id, $var_name, $variable_value_dto)
 
 Update Task Variable
 
-Updates a process variable that is visible from the Task scope. A variable is visible from the task if it is a local task variable, or declared in a parent scope of the task. See the documentation on [variable scopes and visibility](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables#variable-scopes-and-variable-visibility).  **Note**: If a variable doesn't exist, the variable is created in the top-most scope visible from the task.
+Updates a process variable that is visible from the Task scope. A variable is visible from the task if it is a local task variable, or declared in a parent scope of the task. See the documentation on [variable scopes and visibility](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables#variable-scopes-and-variable-visibility).  **Note**: If a variable doesn't exist, the variable is created in the top-most scope visible from the task.
 
 ### Example
 
@@ -370,7 +370,7 @@ setBinaryTaskVariable($id, $var_name, $data, $value_type)
 
 Update Task Variable (Binary)
 
-Sets the serialized value for a binary variable or the binary value for a file variable visible from the task. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/7.15/user-guide/process-engine/variables/).
+Sets the serialized value for a binary variable or the binary value for a file variable visible from the task. A variable is visible from the task if it is a local task variable or declared in a parent scope of the task. See documentation on [visiblity of variables](https://docs.camunda.org/manual/latest/user-guide/process-engine/variables/).
 
 ### Example
 

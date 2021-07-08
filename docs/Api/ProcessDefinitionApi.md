@@ -262,7 +262,7 @@ $apiInstance = new OpenAPI\Client\Api\ProcessDefinitionApi(
 $id = 'id_example'; // string | The id of the process definition.
 $failed_jobs = True; // bool | Whether to include the number of failed jobs in the result or not. Valid values are `true` or `false`.
 $incidents = True; // bool | Valid values for this property are `true` or `false`. If this property has been set to `true` the result will include the corresponding number of incidents for each occurred incident type. If it is set to `false`, the incidents will not be included in the result. Cannot be used in combination with `incidentsForType`.
-$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 
 try {
     $result = $apiInstance->getActivityStatistics($id, $failed_jobs, $incidents, $incidents_for_type);
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
  **id** | **string**| The id of the process definition. |
  **failed_jobs** | **bool**| Whether to include the number of failed jobs in the result or not. Valid values are &#x60;true&#x60; or &#x60;false&#x60;. | [optional]
  **incidents** | **bool**| Valid values for this property are &#x60;true&#x60; or &#x60;false&#x60;. If this property has been set to &#x60;true&#x60; the result will include the corresponding number of incidents for each occurred incident type. If it is set to &#x60;false&#x60;, the incidents will not be included in the result. Cannot be used in combination with &#x60;incidentsForType&#x60;. | [optional]
- **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
 
 ### Return type
 
@@ -324,7 +324,7 @@ $apiInstance = new OpenAPI\Client\Api\ProcessDefinitionApi(
 $key = 'key_example'; // string | The key of the process definition (the latest version thereof) to be retrieved.
 $failed_jobs = True; // bool | Whether to include the number of failed jobs in the result or not. Valid values are `true` or `false`.
 $incidents = True; // bool | Valid values for this property are `true` or `false`. If this property has been set to `true` the result will include the corresponding number of incidents for each occurred incident type. If it is set to `false`, the incidents will not be included in the result. Cannot be used in combination with `incidentsForType`.
-$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 
 try {
     $result = $apiInstance->getActivityStatisticsByProcessDefinitionKey($key, $failed_jobs, $incidents, $incidents_for_type);
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
  **key** | **string**| The key of the process definition (the latest version thereof) to be retrieved. |
  **failed_jobs** | **bool**| Whether to include the number of failed jobs in the result or not. Valid values are &#x60;true&#x60; or &#x60;false&#x60;. | [optional]
  **incidents** | **bool**| Valid values for this property are &#x60;true&#x60; or &#x60;false&#x60;. If this property has been set to &#x60;true&#x60; the result will include the corresponding number of incidents for each occurred incident type. If it is set to &#x60;false&#x60;, the incidents will not be included in the result. Cannot be used in combination with &#x60;incidentsForType&#x60;. | [optional]
- **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
 
 ### Return type
 
@@ -387,7 +387,7 @@ $key = 'key_example'; // string | The key of the process definition (the latest 
 $tenant_id = 'tenant_id_example'; // string | The id of the tenant the process definition belongs to.
 $failed_jobs = True; // bool | Whether to include the number of failed jobs in the result or not. Valid values are `true` or `false`.
 $incidents = True; // bool | Valid values for this property are `true` or `false`. If this property has been set to `true` the result will include the corresponding number of incidents for each occurred incident type. If it is set to `false`, the incidents will not be included in the result. Cannot be used in combination with `incidentsForType`.
-$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 
 try {
     $result = $apiInstance->getActivityStatisticsByProcessDefinitionKeyAndTenantId($key, $tenant_id, $failed_jobs, $incidents, $incidents_for_type);
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
  **tenant_id** | **string**| The id of the tenant the process definition belongs to. |
  **failed_jobs** | **bool**| Whether to include the number of failed jobs in the result or not. Valid values are &#x60;true&#x60; or &#x60;false&#x60;. | [optional]
  **incidents** | **bool**| Valid values for this property are &#x60;true&#x60; or &#x60;false&#x60;. If this property has been set to &#x60;true&#x60; the result will include the corresponding number of incidents for each occurred incident type. If it is set to &#x60;false&#x60;, the incidents will not be included in the result. Cannot be used in combination with &#x60;incidentsForType&#x60;. | [optional]
- **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
 
 ### Return type
 
@@ -432,7 +432,7 @@ getDeployedStartForm($id): \SplFileObject
 
 Get Deployed Start Form
 
-Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#embedded-task-forms).
+Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/latest/user-guide/task-forms/#embedded-task-forms).
 
 ### Example
 
@@ -488,7 +488,7 @@ getDeployedStartFormByKey($key): \SplFileObject
 
 Get Deployed Start Form
 
-Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#embedded-task-forms).
+Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/latest/user-guide/task-forms/#embedded-task-forms).
 
 ### Example
 
@@ -544,7 +544,7 @@ getDeployedStartFormByKeyAndTenantId($key, $tenant_id): \SplFileObject
 
 Get Deployed Start Form
 
-Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#embedded-task-forms).
+Retrieves the deployed form that can be referenced from a start event. For further information please refer to [User Guide](https://docs.camunda.org/manual/latest/user-guide/task-forms/#embedded-task-forms).
 
 ### Example
 
@@ -1129,7 +1129,7 @@ $apiInstance = new OpenAPI\Client\Api\ProcessDefinitionApi(
 );
 $failed_jobs = True; // bool | Whether to include the number of failed jobs in the result or not. Valid values are `true` or `false`.
 $incidents = True; // bool | Valid values for this property are `true` or `false`. If this property has been set to `true` the result will include the corresponding number of incidents for each occurred incident type. If it is set to `false`, the incidents will not be included in the result. Cannot be used in combination with `incidentsForType`.
-$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incidents_for_type = 'incidents_for_type_example'; // string | If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with `incidents`. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 $root_incidents = True; // bool | Valid values for this property are `true` or `false`. If this property has been set to `true` the result will include the corresponding number of root incidents for each occurred incident type. If it is set to `false`, the incidents will not be included in the result. Cannot be used in combination with `incidentsForType` or `incidents`.
 
 try {
@@ -1146,7 +1146,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **failed_jobs** | **bool**| Whether to include the number of failed jobs in the result or not. Valid values are &#x60;true&#x60; or &#x60;false&#x60;. | [optional]
  **incidents** | **bool**| Valid values for this property are &#x60;true&#x60; or &#x60;false&#x60;. If this property has been set to &#x60;true&#x60; the result will include the corresponding number of incidents for each occurred incident type. If it is set to &#x60;false&#x60;, the incidents will not be included in the result. Cannot be used in combination with &#x60;incidentsForType&#x60;. | [optional]
- **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incidents_for_type** | **string**| If this property has been set with any incident type (i.e., a string value) the result will only include the number of incidents for the assigned incident type. Cannot be used in combination with &#x60;incidents&#x60;. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
  **root_incidents** | **bool**| Valid values for this property are &#x60;true&#x60; or &#x60;false&#x60;. If this property has been set to &#x60;true&#x60; the result will include the corresponding number of root incidents for each occurred incident type. If it is set to &#x60;false&#x60;, the incidents will not be included in the result. Cannot be used in combination with &#x60;incidentsForType&#x60; or &#x60;incidents&#x60;. | [optional]
 
 ### Return type
@@ -1174,7 +1174,7 @@ getProcessDefinitions($process_definition_id, $process_definition_id_in, $name, 
 
 Get List
 
-Queries for process definitions that fulfill given parameters. Parameters may be the properties of  process definitions, such as the name, key or version. The size of the result set can be retrieved by using the [Get Definition Count](https://docs.camunda.org/manual/7.15/reference/rest/process-definition/get-query-count/) method.
+Queries for process definitions that fulfill given parameters. Parameters may be the properties of  process definitions, such as the name, key or version. The size of the result set can be retrieved by using the [Get Definition Count](https://docs.camunda.org/manual/latest/reference/rest/process-definition/get-query-count/) method.
 
 ### Example
 
@@ -1194,8 +1194,8 @@ $process_definition_id_in = 'process_definition_id_in_example'; // string | Filt
 $name = 'name_example'; // string | Filter by process definition name.
 $name_like = 'name_like_example'; // string | Filter by process definition names that the parameter is a substring of.
 $deployment_id = 'deployment_id_example'; // string | Filter by the deployment the id belongs to.
-$deployed_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
-$deployed_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
+$deployed_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
+$deployed_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
 $key = 'key_example'; // string | Filter by process definition key, i.e., the id in the BPMN 2.0 XML. Exact match.
 $keys_in = 'keys_in_example'; // string | Filter by a comma-separated list of process definition keys.
 $key_like = 'key_like_example'; // string | Filter by process definition keys that the parameter is a substring of.
@@ -1209,7 +1209,7 @@ $startable_by = 'startable_by_example'; // string | Filter by a user name who is
 $active = True; // bool | Only include active process definitions. Value may only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | Only include suspended process definitions. Value may only be `true`, as `false` is the default behavior.
 $incident_id = 'incident_id_example'; // string | Filter by the incident id.
-$incident_type = 'incident_type_example'; // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incident_type = 'incident_type_example'; // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 $incident_message = 'incident_message_example'; // string | Filter by the incident message. Exact match.
 $incident_message_like = 'incident_message_like_example'; // string | Filter by the incident message that the parameter is a substring of.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of tenant ids. A process definition must have one of the given tenant ids.
@@ -1243,8 +1243,8 @@ Name | Type | Description  | Notes
  **name** | **string**| Filter by process definition name. | [optional]
  **name_like** | **string**| Filter by process definition names that the parameter is a substring of. | [optional]
  **deployment_id** | **string**| Filter by the deployment the id belongs to. | [optional]
- **deployed_after** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
- **deployed_at** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
+ **deployed_after** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
+ **deployed_at** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
  **key** | **string**| Filter by process definition key, i.e., the id in the BPMN 2.0 XML. Exact match. | [optional]
  **keys_in** | **string**| Filter by a comma-separated list of process definition keys. | [optional]
  **key_like** | **string**| Filter by process definition keys that the parameter is a substring of. | [optional]
@@ -1258,7 +1258,7 @@ Name | Type | Description  | Notes
  **active** | **bool**| Only include active process definitions. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| Only include suspended process definitions. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **incident_id** | **string**| Filter by the incident id. | [optional]
- **incident_type** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incident_type** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
  **incident_message** | **string**| Filter by the incident message. Exact match. | [optional]
  **incident_message_like** | **string**| Filter by the incident message that the parameter is a substring of. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of tenant ids. A process definition must have one of the given tenant ids. | [optional]
@@ -1300,7 +1300,7 @@ getProcessDefinitionsCount($process_definition_id, $process_definition_id_in, $n
 
 Get List Count
 
-Requests the number of process definitions that fulfill the query criteria. Takes the same filtering parameters as the [Get Definitions](https://docs.camunda.org/manual/7.15/reference/rest/process-definition/get-query/) method.
+Requests the number of process definitions that fulfill the query criteria. Takes the same filtering parameters as the [Get Definitions](https://docs.camunda.org/manual/latest/reference/rest/process-definition/get-query/) method.
 
 ### Example
 
@@ -1320,8 +1320,8 @@ $process_definition_id_in = 'process_definition_id_in_example'; // string | Filt
 $name = 'name_example'; // string | Filter by process definition name.
 $name_like = 'name_like_example'; // string | Filter by process definition names that the parameter is a substring of.
 $deployment_id = 'deployment_id_example'; // string | Filter by the deployment the id belongs to.
-$deployed_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
-$deployed_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
+$deployed_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
+$deployed_at = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format `yyyy-MM-dd'T'HH:mm:ss.SSSZ`, e.g., `2013-01-23T14:42:45.546+0200`.
 $key = 'key_example'; // string | Filter by process definition key, i.e., the id in the BPMN 2.0 XML. Exact match.
 $keys_in = 'keys_in_example'; // string | Filter by a comma-separated list of process definition keys.
 $key_like = 'key_like_example'; // string | Filter by process definition keys that the parameter is a substring of.
@@ -1335,7 +1335,7 @@ $startable_by = 'startable_by_example'; // string | Filter by a user name who is
 $active = True; // bool | Only include active process definitions. Value may only be `true`, as `false` is the default behavior.
 $suspended = True; // bool | Only include suspended process definitions. Value may only be `true`, as `false` is the default behavior.
 $incident_id = 'incident_id_example'; // string | Filter by the incident id.
-$incident_type = 'incident_type_example'; // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
+$incident_type = 'incident_type_example'; // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types.
 $incident_message = 'incident_message_example'; // string | Filter by the incident message. Exact match.
 $incident_message_like = 'incident_message_like_example'; // string | Filter by the incident message that the parameter is a substring of.
 $tenant_id_in = 'tenant_id_in_example'; // string | Filter by a comma-separated list of tenant ids. A process definition must have one of the given tenant ids.
@@ -1365,8 +1365,8 @@ Name | Type | Description  | Notes
  **name** | **string**| Filter by process definition name. | [optional]
  **name_like** | **string**| Filter by process definition names that the parameter is a substring of. | [optional]
  **deployment_id** | **string**| Filter by the deployment the id belongs to. | [optional]
- **deployed_after** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
- **deployed_at** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/7.15/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
+ **deployed_after** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed after (exclusive) a specific time. By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
+ **deployed_at** | **\DateTime**| Filter by the deploy time of the deployment the process definition belongs to. Only selects process definitions that have been deployed at a specific time (exact match). By [default](https://docs.camunda.org/manual/latest/reference/rest/overview/date-format/), the date must have the format &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;, e.g., &#x60;2013-01-23T14:42:45.546+0200&#x60;. | [optional]
  **key** | **string**| Filter by process definition key, i.e., the id in the BPMN 2.0 XML. Exact match. | [optional]
  **keys_in** | **string**| Filter by a comma-separated list of process definition keys. | [optional]
  **key_like** | **string**| Filter by process definition keys that the parameter is a substring of. | [optional]
@@ -1380,7 +1380,7 @@ Name | Type | Description  | Notes
  **active** | **bool**| Only include active process definitions. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **suspended** | **bool**| Only include suspended process definitions. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional]
  **incident_id** | **string**| Filter by the incident id. | [optional]
- **incident_type** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
+ **incident_type** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]
  **incident_message** | **string**| Filter by the incident message. Exact match. | [optional]
  **incident_message_like** | **string**| Filter by the incident message that the parameter is a substring of. | [optional]
  **tenant_id_in** | **string**| Filter by a comma-separated list of tenant ids. A process definition must have one of the given tenant ids. | [optional]
@@ -1418,7 +1418,7 @@ getRenderedStartForm($id): \SplFileObject
 
 Get Rendered Start Form
 
-Retrieves the rendered form for a process definition. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Retrieves the rendered form for a process definition. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -1474,7 +1474,7 @@ getRenderedStartFormByKey($key): \SplFileObject
 
 Get Rendered Start Form
 
-Retrieves  the rendered form for the latest version of the process definition which belongs to no tenant. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Retrieves  the rendered form for the latest version of the process definition which belongs to no tenant. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -1530,7 +1530,7 @@ getRenderedStartFormByKeyAndTenantId($key, $tenant_id): \SplFileObject
 
 Get Rendered Start Form
 
-Retrieves  the rendered form for the latest version of the process definition for a tenant. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Retrieves  the rendered form for the latest version of the process definition for a tenant. This method can be used to get the HTML rendering of a [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -1758,7 +1758,7 @@ getStartFormVariables($id, $variable_names, $deserialize_values): array<string,\
 
 Get Start Form Variables
 
-Retrieves the start form variables for a process definition (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
+Retrieves the start form variables for a process definition (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
 
 ### Example
 
@@ -1818,7 +1818,7 @@ getStartFormVariablesByKey($key, $variable_names, $deserialize_values): array<st
 
 Get Start Form Variables
 
-Retrieves the start form variables for the latest process definition which belongs to no tenant (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
+Retrieves the start form variables for the latest process definition which belongs to no tenant (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
 
 ### Example
 
@@ -1878,7 +1878,7 @@ getStartFormVariablesByKeyAndTenantId($key, $tenant_id, $variable_names, $deseri
 
 Get Start Form Variables
 
-Retrieves the start form variables for the latest process definition for a tenant (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
+Retrieves the start form variables for the latest process definition for a tenant (only if they are defined via the  [Generated Task Form](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms) approach). The start form variables take form data specified on the start event into account. If form fields are defined, the variable types and default values of the form fields are taken into account.
 
 ### Example
 
@@ -1940,7 +1940,7 @@ restartProcessInstance($id, $restart_process_instance_dto)
 
 Restart Process Instance
 
-Restarts process instances that were canceled or terminated synchronously. Can also restart completed process instances. It will create a new instance using the original instance information. To execute the restart asynchronously, use the [Restart Process Instance Async](https://docs.camunda.org/manual/7.15/reference/rest/process-definition/post-restart-process-instance-async/) method.  For more information about the difference between synchronous and asynchronous execution, please refer to the related section of the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/process-instance-restart/#execution).
+Restarts process instances that were canceled or terminated synchronously. Can also restart completed process instances. It will create a new instance using the original instance information. To execute the restart asynchronously, use the [Restart Process Instance Async](https://docs.camunda.org/manual/latest/reference/rest/process-definition/post-restart-process-instance-async/) method.  For more information about the difference between synchronous and asynchronous execution, please refer to the related section of the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/process-instance-restart/#execution).
 
 ### Example
 
@@ -1997,7 +1997,7 @@ restartProcessInstanceAsyncOperation($id, $restart_process_instance_dto): \OpenA
 
 Restart Process Instance Async
 
-Restarts process instances that were canceled or terminated asynchronously. Can also restart completed process instances. It will create a new instance using the original instance information. To execute the restart asynchronously, use the [Restart Process Instance](https://docs.camunda.org/manual/7.15/reference/rest/process-definition/post-restart-process-instance-sync/) method.  For more information about the difference between synchronous and asynchronous execution, please refer to the related section of the [User Guide](https://docs.camunda.org/manual/7.15/user-guide/process-engine/process-instance-restart/#execution).
+Restarts process instances that were canceled or terminated asynchronously. Can also restart completed process instances. It will create a new instance using the original instance information. To execute the restart asynchronously, use the [Restart Process Instance](https://docs.camunda.org/manual/latest/reference/rest/process-definition/post-restart-process-instance-sync/) method.  For more information about the difference between synchronous and asynchronous execution, please refer to the related section of the [User Guide](https://docs.camunda.org/manual/latest/user-guide/process-engine/process-instance-restart/#execution).
 
 ### Example
 
@@ -2231,7 +2231,7 @@ submitForm($id, $start_process_instance_form_dto): \OpenAPI\Client\Model\Process
 
 Submit Start Form
 
-Starts a process instance using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Starts a process instance using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -2289,7 +2289,7 @@ submitFormByKey($key, $start_process_instance_form_dto): \OpenAPI\Client\Model\P
 
 Submit Start Form
 
-Starts the latest version of the process definition which belongs to no tenant using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Starts the latest version of the process definition which belongs to no tenant using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -2347,7 +2347,7 @@ submitFormByKeyAndTenantId($key, $tenant_id, $start_process_instance_form_dto): 
 
 Submit Start Form
 
-Starts the latest version of the process definition for a tenant using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/7.15/user-guide/task-forms/#generated-task-forms).
+Starts the latest version of the process definition for a tenant using a set of process variables and the business key. If the start event has Form Field Metadata defined, the process engine will perform backend validation for any form fields which have validators defined. See [Documentation on Generated Task Forms](https://docs.camunda.org/manual/latest/user-guide/task-forms/#generated-task-forms).
 
 ### Example
 
@@ -2407,7 +2407,7 @@ updateHistoryTimeToLiveByProcessDefinitionId($id, $history_time_to_live_dto)
 
 Update History Time to Live
 
-Updates history time to live for process definition. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates history time to live for process definition. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 
@@ -2464,7 +2464,7 @@ updateHistoryTimeToLiveByProcessDefinitionKey($key, $history_time_to_live_dto)
 
 Update History Time to Live
 
-Updates history time to live for the latest version of the process definition which belongs to no tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates history time to live for the latest version of the process definition which belongs to no tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 
@@ -2521,7 +2521,7 @@ updateHistoryTimeToLiveByProcessDefinitionKeyAndTenantId($key, $tenant_id, $hist
 
 Update History Time to Live
 
-Updates history time to live for the latest version of the process definition for a tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/7.15/user-guide/process-engine/history/#history-cleanup).
+Updates history time to live for the latest version of the process definition for a tenant. The field is used within [History cleanup](https://docs.camunda.org/manual/latest/user-guide/process-engine/history/#history-cleanup).
 
 ### Example
 
